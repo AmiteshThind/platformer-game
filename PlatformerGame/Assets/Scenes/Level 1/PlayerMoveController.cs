@@ -24,6 +24,7 @@ public class PlayerMoveController : MonoBehaviour
 
     void Start()
     {
+        transform.Rotate(0, 180f, 0);
         isFacingRight = true;
         healthBar = FindObjectOfType<Healthbar>();
         playerIsMoving = false;
@@ -51,6 +52,7 @@ public class PlayerMoveController : MonoBehaviour
         if(isFacingRight && (joystick.Horizontal<0 || Input.GetAxis("Horizontal")<0))
         {
             FlipPlayer();
+            print("FLIP");
         }else if(!isFacingRight && (joystick.Horizontal > 0 || Input.GetAxis("Horizontal") > 0))
         {
             FlipPlayer();
@@ -119,8 +121,9 @@ public class PlayerMoveController : MonoBehaviour
 
     void FlipPlayer()
     {
+        print("Player");
         isFacingRight = !isFacingRight;
-        transform.Rotate(0, 180f, 0);
+        transform.Rotate(0f, 180f, 0f);
     }
 
 
