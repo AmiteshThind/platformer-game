@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMoveController : MonoBehaviour
 {
@@ -15,9 +16,15 @@ public class PlayerMoveController : MonoBehaviour
     public float lowJumpMultiplier = 2f; // gravity factor for when player performs a low jump 
     public bool isGrounded;
     public float playerSpeed;
+    public bool playerIsMoving;
+    public Healthbar healthBar; 
+
 
     void Start()
     {
+        healthBar = FindObjectOfType<Healthbar>();
+
+        playerIsMoving = false;
         playerSpeed = 10f;
         isGrounded = false;
         joystick = FindObjectOfType<Joystick>();
@@ -28,19 +35,29 @@ public class PlayerMoveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         
+        if (rb.velocity.x > 3 || rb.velocity.x < -3)
+        {
+            playerIsMoving = true;
+        }
+        else
+        {
+            playerIsMoving = false; 
+        }
       
     }
 
     // Used for handling any physics/manipulation of rigidbody
     private void FixedUpdate()
     {
+        shrinkPlayer();
         rb.velocity = new Vector2(joystick.Horizontal *playerSpeed +Input.GetAxis("Horizontal")*playerSpeed , rb.velocity.y);//set horizontal player speed 
         if (!jump & jumpJoyButton.Pressed && isGrounded)
         {
             jump = true; 
             rb.velocity += Vector2.up * jumpVelocity;
         }
-        if (jump && !jumpJoyButton.Pressed)
+        if (jump && (!jumpJoyButton.Pressed))
         {
             jump = false;
         }
@@ -51,6 +68,7 @@ public class PlayerMoveController : MonoBehaviour
         }else if(rb.velocity.y>0 && !jump){
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier);
         }
+
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -71,7 +89,18 @@ public class PlayerMoveController : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D other)
     {
-                isGrounded = false;
+                isGrounded = false; 
+    }
+
+    void shrinkPlayer()
+    {
+        if (playerIsMoving)
+        {
+            this.transform.localScale -= new Vector3(0.001f,0.001f,0);
+            print(this.transform.localScale);
+            healthBar.TakeDamage(1);
+        }
+        
     }
 
 

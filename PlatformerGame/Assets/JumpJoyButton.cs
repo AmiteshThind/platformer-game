@@ -5,6 +5,7 @@ public class JumpJoyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandl
 {
     [HideInInspector]
     public bool Pressed;
+
   
 
     // Start is called before the first frame update
