@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SimpleHealthBar/Healthbar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Level 1/PlayerMoveController.cs">
     <Files>
       <File FileName="Assets/JumpJoyButton.cs" Line="32" Column="6" />
-      <File FileName="Assets/Scenes/Level 1/PlayerMoveController.cs" Line="13" Column="31" />
-      <File FileName="Assets/SimpleHealthBar/Healthbar.cs" Line="3" Column="1" />
-      <File FileName="Assets/SimpleHealthBar/documentation.txt" Line="16" Column="46" />
+      <File FileName="Assets/Scenes/Level 1/PlayerMoveController.cs" Line="74" Column="31" />
+      <File FileName="Assets/SimpleHealthBar/Healthbar.cs" Line="98" Column="10" />
+      <File FileName="Assets/SimpleHealthBar/documentation.txt" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,11 +12,11 @@
           <Node name="PlatformerGame" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scenes" expanded="True">
-                <Node name="Level 1" expanded="True" />
+                <Node name="Level 1" expanded="True">
+                  <Node name="PlayerMoveController.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="SimpleHealthBar" expanded="True">
-                <Node name="Healthbar.cs" selected="True" />
-              </Node>
+              <Node name="SimpleHealthBar" expanded="True" />
             </Node>
           </Node>
         </State>

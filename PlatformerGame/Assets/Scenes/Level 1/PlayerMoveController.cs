@@ -17,13 +17,15 @@ public class PlayerMoveController : MonoBehaviour
     public bool isGrounded;
     public float playerSpeed;
     public bool playerIsMoving;
-    public Healthbar healthBar; 
+    public Healthbar healthBar;
+    private bool isFacingRight;
+
 
 
     void Start()
     {
+        isFacingRight = true;
         healthBar = FindObjectOfType<Healthbar>();
-
         playerIsMoving = false;
         playerSpeed = 10f;
         isGrounded = false;
@@ -35,16 +37,27 @@ public class PlayerMoveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
+        
+
         if (rb.velocity.x > 3 || rb.velocity.x < -3)
         {
             playerIsMoving = true;
         }
         else
         {
-            playerIsMoving = false; 
+            playerIsMoving = false;
         }
-      
+
+        if(isFacingRight && (joystick.Horizontal<0 || Input.GetAxis("Horizontal")<0))
+        {
+            FlipPlayer();
+        }else if(!isFacingRight && (joystick.Horizontal > 0 || Input.GetAxis("Horizontal") > 0))
+        {
+            FlipPlayer();
+        }
+
+
+
     }
 
     // Used for handling any physics/manipulation of rigidbody
@@ -68,6 +81,7 @@ public class PlayerMoveController : MonoBehaviour
         }else if(rb.velocity.y>0 && !jump){
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier);
         }
+
 
     }
 
@@ -101,6 +115,12 @@ public class PlayerMoveController : MonoBehaviour
             healthBar.TakeDamage(1);
         }
         
+    }
+
+    void FlipPlayer()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0, 180f, 0);
     }
 
 
