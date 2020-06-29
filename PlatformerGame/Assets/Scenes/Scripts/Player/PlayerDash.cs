@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     public bool DashCharged = true; 
-    public float DashForce = 1f;
+    public float DashForce = 100f;
     public float StartDashTimer = 0.15f;
     float CurrentDashTimer;
     float DashDirection; 
@@ -72,7 +72,8 @@ public class PlayerDash : MonoBehaviour
 
         if (isDashing)
         {
-            this.transform.position = new Vector2(this.transform.position.x + DashForce*DashDirection, this.transform.position.y);
+        
+            rb.velocity = new Vector2(DashForce*DashDirection,0);
             CurrentDashTimer -= Time.deltaTime;
         }
 
