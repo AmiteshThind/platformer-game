@@ -69,26 +69,27 @@ public class PlayerMoveController : MonoBehaviour
     {
         shrinkPlayer();
         rb.velocity = new Vector2(joystick.Horizontal *playerSpeed +Input.GetAxis("Horizontal")*playerSpeed , rb.velocity.y);//set horizontal player speed 
-        if (!jump & jumpJoyButton.Pressed && isGrounded)
+        if (!jump & Input.GetKeyDown(KeyCode.Z) && isGrounded)
         {
             
             jump = true; 
             rb.velocity += Vector2.up * jumpVelocity;
         }
-        if (jump && (!jumpJoyButton.Pressed))
+        if (jump && (!Input.GetKeyDown(KeyCode.Z)))
         {
             jump = false;
         }
 
         if (rb.velocity.y <= 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultipler);
+            rb.velocity += Vector2.up *(fallMultipler);
         }else if(rb.velocity.y>0 && !jump){
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier);
+            rb.velocity += Vector2.up * (lowJumpMultiplier);
         }
+         
 
 
-        
+
 
     }
 
