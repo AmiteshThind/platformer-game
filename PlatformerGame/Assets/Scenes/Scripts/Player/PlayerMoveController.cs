@@ -24,7 +24,6 @@ public class PlayerMoveController : MonoBehaviour
 
     void Start()
     {
-        transform.Rotate(0, 180f, 0);
         isFacingRight = true;
         playerIsMoving = false;
         playerSpeed = 10f;
@@ -131,7 +130,9 @@ public class PlayerMoveController : MonoBehaviour
     {
         print("Player");
         isFacingRight = !isFacingRight;
-        transform.Rotate(0f, 180f, 0f);
+		Vector3 scale = transform.localScale;
+		scale.x *= -1;
+		transform.localScale = scale;
     }
 
 
