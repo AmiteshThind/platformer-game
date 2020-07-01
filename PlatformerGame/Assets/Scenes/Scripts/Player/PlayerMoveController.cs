@@ -11,14 +11,14 @@ public class PlayerMoveController : MonoBehaviour
     private JumpJoyButton jumpJoyButton;
     Rigidbody2D playerRigidBody;
     public bool jump;
-    public float jumpVelocity=40f;
-    public float fallMultipler = 0.02f;// gravity factor when player reaches peak
+    public float jumpVelocity=42f;
+    public float fallMultipler = 0.022f;// gravity factor when player reaches peak
     public float lowJumpMultiplier = 0.1f; // gravity factor for when player performs a low jump 
     public bool isGrounded;
-    public float maxSpeed = 8f;
+    public float maxSpeed = 5f;
     public bool playerIsMoving;
     private bool isFacingRight;
-    public float gravity;
+    public float gravity = -265f;
     private int ExtraJumpCount = 0;
     public int ExtraJumpsInAir = 0; 
     Animator animator;
