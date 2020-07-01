@@ -11,13 +11,15 @@ public class PlayerMoveController : MonoBehaviour
     private JumpJoyButton jumpJoyButton;
     Rigidbody2D playerRigidBody;
     public bool jump;
-    [Range(1, 20)] public float jumpVelocity;
-    public float fallMultipler = 2.5f;// gravity factor when player reaches peak
-    public float lowJumpMultiplier = 2f; // gravity factor for when player performs a low jump 
+    public float jumpVelocity=40f;
+    public float fallMultipler = 0.02f;// gravity factor when player reaches peak
+    public float lowJumpMultiplier = 0.1f; // gravity factor for when player performs a low jump 
     public bool isGrounded;
-    public float maxSpeed = 15f;
+    public float maxSpeed = 6f;
     public bool playerIsMoving;
     private bool isFacingRight;
+    public float gravity;
+    private int ExtraJumpCount = 1;
     Animator animator;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
@@ -30,6 +32,7 @@ public class PlayerMoveController : MonoBehaviour
         jumpJoyButton = FindObjectOfType<JumpJoyButton>();
         animator = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody2D>();
+        Physics2D.gravity = new Vector2(0f,gravity);
     }
 
     // Update is called once per frame
@@ -58,16 +61,23 @@ public class PlayerMoveController : MonoBehaviour
 		// Handle Horizontal Movement
 		ApplyInput();
 
-		if (!jump & Input.GetKeyDown(KeyCode.Space) && isGrounded)
+		if (!jump & Input.GetKeyDown(KeyCode.Space) && (isGrounded || ExtraJumpCount != 0))
 		{
 
 			jump = true;
 			playerRigidBody.velocity += Vector2.up * jumpVelocity;
+            ExtraJumpCount--;
 		}
 		if (jump && (!Input.GetKeyDown(KeyCode.Space)))
 		{
 			jump = false;
 		}
+
+        if (isGrounded)
+        {
+            ExtraJumpCount = 1;
+        }
+        
 
 		if (playerRigidBody.velocity.y <= 0)
 		{

@@ -6,15 +6,15 @@ public class PlayerDash : MonoBehaviour
 {
     public bool DashCharged = true; 
     public float DashForceX = 50f;
-    public float DashForceY = 10f; 
-    public float StartDashTimer = 0.40f;
+    public float DashForceY = 35f; 
+    public float StartDashTimer = 0.15f;
     float CurrentDashTimer;
     float DashDirection; 
     private float moveHorizontalKeyBoardInput,moveHorizontalJoyStickInput;
     private float moveVerticalKeyBoardInput, moveVerticalJoyStickInput;
     public bool isDashing;
-    public float DashRechargeTimeCounter =5f;
-    public float DashRechargeTime = 5f; 
+    public float DashRechargeTimeCounter =2f;
+    public float DashRechargeTime = 2f; 
     Joystick joystick;
     Rigidbody2D rb;
     DashButton dashbutton;
