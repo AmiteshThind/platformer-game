@@ -9,89 +9,85 @@ public class PlayerMoveController : MonoBehaviour
 
     private Joystick joystick;
     private JumpJoyButton jumpJoyButton;
-    Rigidbody2D rb;
+    Rigidbody2D playerRigidBody;
     public bool jump;
     [Range(1, 20)] public float jumpVelocity;
     public float fallMultipler = 2.5f;// gravity factor when player reaches peak
     public float lowJumpMultiplier = 2f; // gravity factor for when player performs a low jump 
     public bool isGrounded;
-    public float playerSpeed;
+    public float maxSpeed = 15f;
     public bool playerIsMoving;
     private bool isFacingRight;
-    Animator animator; 
+    Animator animator;
+	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
-
-
-    void Start()
+	void Start()
     {
-        transform.Rotate(0, 180f, 0);
         isFacingRight = true;
         playerIsMoving = false;
-        playerSpeed = 10f;
         isGrounded = false;
         joystick = FindObjectOfType<Joystick>();
         jumpJoyButton = FindObjectOfType<JumpJoyButton>();
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        playerRigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+		float input = joystick.Horizontal + Input.GetAxis("Horizontal");
+		bool isMoving = Mathf.Abs(input) > 0;
+		bool movingRight = input > 0;
 
-        if (joystick.Horizontal !=0 || Input.GetAxis("Horizontal")!=0)
-        {
-            playerIsMoving = true;
-            animator.SetBool("isMoving",true);
-        }
-        else
-        {
-            playerIsMoving = false;
-            animator.SetBool("isMoving", false);
-        }
-
-        if(isFacingRight && (joystick.Horizontal<0 || Input.GetAxis("Horizontal")<0))
-        {
-            FlipPlayer();
-            print("FLIP");
-        }else if(!isFacingRight && (joystick.Horizontal > 0 || Input.GetAxis("Horizontal") > 0))
-        {
-            FlipPlayer();
-        }
-
-
-
-    }
+        animator.SetBool("isMoving", isMoving);
+		if (isMoving)
+		{
+			if (!movingRight && isFacingRight)
+				FlipPlayer();
+			else if (movingRight && !isFacingRight)
+				FlipPlayer();
+		}
+		
+	}
 
     // Used for handling any physics/manipulation of rigidbody
     private void FixedUpdate()
     {
-        shrinkPlayer();
-        rb.velocity = new Vector2(joystick.Horizontal *playerSpeed +Input.GetAxis("Horizontal")*playerSpeed , rb.velocity.y);//set horizontal player speed 
-        if (!jump & Input.GetKeyDown(KeyCode.Z) && isGrounded)
-        {
-            
-            jump = true; 
-            rb.velocity += Vector2.up * jumpVelocity;
-        }
-        if (jump && (!Input.GetKeyDown(KeyCode.Z)))
-        {
-            jump = false;
-        }
+		//shrinkPlayer();
 
-        if (rb.velocity.y <= 0)
-        {
-            rb.velocity += Vector2.up *(fallMultipler);
-        }else if(rb.velocity.y>0 && !jump){
-            rb.velocity += Vector2.up * (lowJumpMultiplier);
-        }
-         
+		// Handle Horizontal Movement
+		ApplyInput();
 
+		if (!jump & Input.GetKeyDown(KeyCode.Space) && isGrounded)
+		{
 
+			jump = true;
+			playerRigidBody.velocity += Vector2.up * jumpVelocity;
+		}
+		if (jump && (!Input.GetKeyDown(KeyCode.Space)))
+		{
+			jump = false;
+		}
 
+		if (playerRigidBody.velocity.y <= 0)
+		{
+			playerRigidBody.velocity += Vector2.up * Physics2D.gravity * (fallMultipler - 1) * Time.deltaTime;
+		}
+		else if (playerRigidBody.velocity.y > 0 && !jump)
+		{
+			playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
+		}
+	}
 
-    }
+	public void ApplyInput()
+	{
+		float xInput = joystick.Horizontal + Input.GetAxisRaw("Horizontal");
+		Vector2 playerVelocity = playerRigidBody.velocity;
+		// Move the character by finding the target velocity
+		Vector2 targetVelocity = new Vector2(xInput * maxSpeed, playerRigidBody.velocity.y);
+		// And then smoothing it out and applying it to the character
+		playerRigidBody.velocity = Vector2.SmoothDamp(targetVelocity, targetVelocity, ref playerVelocity, m_MovementSmoothing);
+	}
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -129,9 +125,10 @@ public class PlayerMoveController : MonoBehaviour
 
     void FlipPlayer()
     {
-        print("Player");
         isFacingRight = !isFacingRight;
-        transform.Rotate(0f, 180f, 0f);
+		Vector3 scale = transform.localScale;
+		scale.x *= -1;
+		transform.localScale = scale;
     }
 
 
