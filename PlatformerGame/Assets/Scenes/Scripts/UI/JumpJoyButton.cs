@@ -17,7 +17,7 @@ public class JumpJoyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandl
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
 
     void FixedUpdate()
