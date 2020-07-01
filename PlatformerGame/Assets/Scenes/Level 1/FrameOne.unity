@@ -5251,11 +5251,11 @@ MonoBehaviour:
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 0
-  maxSpeed: 8
+  maxSpeed: 5
   playerIsMoving: 0
-  gravity: -265
+  gravity: -250
   ExtraJumpsInAir: 0
-  m_MovementSmoothing: 0.25
+  m_MovementSmoothing: 0.05
 --- !u!4 &1865317346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b,
