@@ -15,7 +15,7 @@ public class PlayerMoveController : MonoBehaviour
     public float fallMultipler = 2.5f;// gravity factor when player reaches peak
     public float lowJumpMultiplier = 2f; // gravity factor for when player performs a low jump 
     public bool isGrounded;
-    public float maxSpeed = 10f;
+    public float maxSpeed = 15f;
     public bool playerIsMoving;
     private bool isFacingRight;
     Animator animator;
