@@ -19,7 +19,8 @@ public class PlayerMoveController : MonoBehaviour
     public bool playerIsMoving;
     private bool isFacingRight;
     public float gravity;
-    private int ExtraJumpCount = 1;
+    private int ExtraJumpCount = 0;
+    public int ExtraJumpsInAir = 0; 
     Animator animator;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
@@ -79,7 +80,7 @@ public class PlayerMoveController : MonoBehaviour
 
         if (isGrounded)
         {
-            ExtraJumpCount = 1;
+            ExtraJumpCount = ExtraJumpsInAir;
         }
         
 

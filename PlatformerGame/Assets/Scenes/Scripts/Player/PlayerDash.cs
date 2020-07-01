@@ -6,7 +6,7 @@ public class PlayerDash : MonoBehaviour
 {
     public bool DashCharged = true; 
     public float DashForceX = 50f;
-    public float DashForceY = 35f; 
+    public float DashForceY = 25f; 
     public float StartDashTimer = 0.15f;
     float CurrentDashTimer;
     float DashDirection; 
