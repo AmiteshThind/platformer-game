@@ -15,7 +15,7 @@ public class PlayerMoveController : MonoBehaviour
     public float fallMultipler = 0.02f;// gravity factor when player reaches peak
     public float lowJumpMultiplier = 0.1f; // gravity factor for when player performs a low jump 
     public bool isGrounded;
-    public float maxSpeed = 6f;
+    public float maxSpeed = 8f;
     public bool playerIsMoving;
     private bool isFacingRight;
     public float gravity;
@@ -61,14 +61,18 @@ public class PlayerMoveController : MonoBehaviour
 		// Handle Horizontal Movement
 		ApplyInput();
 
-		if (!jump & Input.GetKeyDown(KeyCode.Space) && (isGrounded || ExtraJumpCount != 0))
+        //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
+		if (!jump & jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
 		{
+            
 
 			jump = true;
 			playerRigidBody.velocity += Vector2.up * jumpVelocity;
             ExtraJumpCount--;
 		}
-		if (jump && (!Input.GetKeyDown(KeyCode.Space)))
+
+        //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
+        if (jump && (!jumpJoyButton.Pressed))
 		{
 			jump = false;
 		}
