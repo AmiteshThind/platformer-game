@@ -1126,6 +1126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass
       objectReference: {fileID: 0}
+    - target: {fileID: -2944497899934568489, guid: d019e16d7f2bb48928cb194b27816f01,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: d019e16d7f2bb48928cb194b27816f01,
     type: 3}
@@ -4336,6 +4341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -2944497899934568489, guid: d019e16d7f2bb48928cb194b27816f01,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: d019e16d7f2bb48928cb194b27816f01,
     type: 3}
@@ -6886,14 +6896,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 0
   jumpVelocity: 42
-  fallMultipler: 0.05
+  fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 0
   maxSpeed: 5
   playerIsMoving: 0
-  gravity: -250
+  gravity: -265
   ExtraJumpsInAir: 0
-  m_MovementSmoothing: 0.038
+  m_MovementSmoothing: 0.05
 --- !u!4 &1865317346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b,
