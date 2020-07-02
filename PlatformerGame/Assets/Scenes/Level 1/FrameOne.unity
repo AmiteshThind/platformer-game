@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_LookaheadSmoothing: 7
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
-  m_YDamping: 0.85
+  m_YDamping: 2
   m_ZDamping: 1
   m_ScreenX: 0.37
   m_ScreenY: 0.72
@@ -2597,7 +2597,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 38
+  field of view: 62
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2623,7 +2623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -112.31952, y: 10.300083, z: -20}
+  m_LocalPosition: {x: -109.57747, y: 12.887573, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3194,7 +3194,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1865317346}
   m_Lens:
-    FieldOfView: 38
+    FieldOfView: 62
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -3216,7 +3216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235576811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -112.31952, y: 10.300083, z: -20}
+  m_LocalPosition: {x: -109.57747, y: 12.887573, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 585134862}
@@ -4856,7 +4856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.27
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4896,11 +4896,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalScale.z
@@ -5248,14 +5248,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 0
   jumpVelocity: 42
-  fallMultipler: 0.022
+  fallMultipler: 0.05
   lowJumpMultiplier: 0.1
   isGrounded: 0
   maxSpeed: 5
   playerIsMoving: 0
   gravity: -250
   ExtraJumpsInAir: 0
-  m_MovementSmoothing: 0.05
+  m_MovementSmoothing: 0.038
 --- !u!4 &1865317346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b,

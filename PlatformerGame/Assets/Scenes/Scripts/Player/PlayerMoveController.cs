@@ -68,7 +68,8 @@ public class PlayerMoveController : MonoBehaviour
             
 
 			jump = true;
-			playerRigidBody.velocity += Vector2.up * jumpVelocity;
+            playerRigidBody.velocity += Vector2.up * jumpVelocity;
+            //playerRigidBody.AddForce(transform.up * jumpVelocity,ForceMode2D.Impulse);
             ExtraJumpCount--;
 		}
 
