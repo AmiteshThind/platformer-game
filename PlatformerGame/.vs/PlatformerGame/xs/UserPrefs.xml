@@ -1,25 +1,15 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scripts/UI/JumpJoyButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.unity.2d.spriteshape@3.0.12/Runtime/SpriteShapeController.cs">
     <Files>
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerDash.cs" Line="38" Column="26" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="71" Column="50" />
-      <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerDash.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="71" Column="39" />
+      <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" Line="32" Column="31" />
+      <File FileName="Library/PackageCache/com.unity.2d.spriteshape@3.0.12/Runtime/SpriteShapeController.cs" Line="347" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="PlatformerGame" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scenes" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="Player" expanded="True" />
-                  <Node name="UI" expanded="True">
-                    <Node name="JumpJoyButton.cs" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="PlatformerGame" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
