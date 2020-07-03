@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 289870413}
   m_Layer: 0
   m_Name: New SpriteShapeController (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2110,11 +2110,11 @@ MonoBehaviour:
   m_LookaheadSmoothing: 7
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
-  m_YDamping: 2
+  m_YDamping: 1.5
   m_ZDamping: 1
   m_ScreenX: 0.37
   m_ScreenY: 0.88
-  m_CameraDistance: 20
+  m_CameraDistance: 35
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -3466,7 +3466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.564283, y: 15.502619, z: -20}
+  m_LocalPosition: {x: 33.737495, y: 21.437084, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4339,7 +4339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235576811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.564283, y: 15.502619, z: -20}
+  m_LocalPosition: {x: 33.737495, y: 21.437084, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 585134862}
@@ -6879,11 +6879,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalScale.z
@@ -7174,7 +7174,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1865317341}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 73259e7bd24ad43e38d04594b8506333, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7223,7 +7223,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 7.2
   m_Material: {fileID: 6200000, guid: 73259e7bd24ad43e38d04594b8506333, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -7242,7 +7242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
-  jumpVelocity: 42
+  jumpVelocity: 16
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 0
@@ -7250,7 +7250,7 @@ MonoBehaviour:
   playerIsMoving: 0
   gravity: -265
   ExtraJumpsInAir: 0
-  m_MovementSmoothing: 0.05
+  m_MovementSmoothing: 0.3
 --- !u!4 &1865317346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b,

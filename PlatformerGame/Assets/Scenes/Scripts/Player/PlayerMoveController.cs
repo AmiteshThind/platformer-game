@@ -33,7 +33,7 @@ public class PlayerMoveController : MonoBehaviour
         jumpJoyButton = FindObjectOfType<JumpJoyButton>();
         animator = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody2D>();
-        Physics2D.gravity = new Vector2(0f,gravity);
+        //Physics2D.gravity = new Vector2(0f,gravity);
     }
 
     // Update is called once per frame
@@ -63,15 +63,16 @@ public class PlayerMoveController : MonoBehaviour
 		ApplyInput();
 
         //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-		if (!jump & jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
+		if (jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
 		{
             
 
 			jump = true;
-            playerRigidBody.velocity += Vector2.up * jumpVelocity;
-            //playerRigidBody.AddForce(transform.up * jumpVelocity,ForceMode2D.Impulse);
+            //playerRigidBody.velocity += Vector2.up * jumpVelocity;
+            playerRigidBody.AddForce(new Vector2(0f,jumpVelocity),ForceMode2D.Impulse);
             ExtraJumpCount--;
-		}
+            animator.SetBool("inAir", true);
+        }
 
         //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
         if (jump && (!jumpJoyButton.Pressed))
@@ -87,11 +88,11 @@ public class PlayerMoveController : MonoBehaviour
 
 		if (playerRigidBody.velocity.y <= 0)
 		{
-			playerRigidBody.velocity += Vector2.up * Physics2D.gravity * (fallMultipler - 1) * Time.deltaTime;
+			//playerRigidBody.velocity += Vector2.up * Physics2D.gravity * (fallMultipler - 1) * Time.deltaTime;
 		}
 		else if (playerRigidBody.velocity.y > 0 && !jump)
 		{
-			playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
+			//playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
 		}
 	}
 
@@ -125,7 +126,7 @@ public class PlayerMoveController : MonoBehaviour
     void OnCollisionExit2D(Collision2D other)
     {
                 isGrounded = false;
-        animator.SetBool("inAir", true);
+       
     }
 
     void shrinkPlayer()
