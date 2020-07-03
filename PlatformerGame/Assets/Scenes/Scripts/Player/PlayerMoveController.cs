@@ -63,7 +63,7 @@ public class PlayerMoveController : MonoBehaviour
 		ApplyInput();
 
         //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-		if (jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
+		if (!jump && jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
 		{
             
 
