@@ -63,7 +63,7 @@ public class PlayerMoveController : MonoBehaviour
 		ApplyInput();
 
         //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-		if (!jump && jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
+		if (!jump & jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
 		{
             
 
@@ -88,11 +88,11 @@ public class PlayerMoveController : MonoBehaviour
 
 		if (playerRigidBody.velocity.y <= 0)
 		{
-			//playerRigidBody.velocity += Vector2.up * Physics2D.gravity * (fallMultipler - 1) * Time.deltaTime;
+			playerRigidBody.velocity += Vector2.up * Physics2D.gravity * (fallMultipler - 1) * Time.deltaTime;
 		}
 		else if (playerRigidBody.velocity.y > 0 && !jump)
 		{
-			//playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
+			playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
 		}
 	}
 
