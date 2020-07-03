@@ -20,7 +20,8 @@ public class PlayerMoveController : MonoBehaviour
     private bool isFacingRight;
     public float gravity = -265f;
     private int ExtraJumpCount = 0;
-    public int ExtraJumpsInAir = 0; 
+    public int ExtraJumpsInAir = 0;
+    [Range(0,1f)]public float glideFactor = 0.003f;
     Animator animator;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
@@ -86,14 +87,16 @@ public class PlayerMoveController : MonoBehaviour
         }
         
 
-		if (playerRigidBody.velocity.y <= 0)
+		if (playerRigidBody.velocity.y <= 0 && jumpJoyButton.Pressed)
 		{
-			playerRigidBody.velocity += Vector2.up * Physics2D.gravity * (fallMultipler - 1) * Time.deltaTime;
+            playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
+                
 		}
-		else if (playerRigidBody.velocity.y > 0 && !jump)
+		else 
 		{
-			playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
-		}
+            //playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
+            playerRigidBody.gravityScale = 6f;
+        }
 	}
 
 	public void ApplyInput()
@@ -120,6 +123,7 @@ public class PlayerMoveController : MonoBehaviour
         if (other.gameObject.tag == "Ground" && isGrounded == true)
         {
             isGrounded = true;
+           
         }
     }
 
