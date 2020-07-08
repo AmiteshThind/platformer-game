@@ -5569,7 +5569,7 @@ GameObject:
   - component: {fileID: 1051309310}
   m_Layer: 0
   m_Name: Platform (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9205,7 +9205,7 @@ GameObject:
   - component: {fileID: 1617585098}
   m_Layer: 0
   m_Name: Platform (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9409,7 +9409,7 @@ GameObject:
   - component: {fileID: 1624732870}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9919,7 +9919,7 @@ GameObject:
   - component: {fileID: 1680973263}
   m_Layer: 0
   m_Name: Platform (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10175,7 +10175,7 @@ GameObject:
   - component: {fileID: 1706356148}
   m_Layer: 0
   m_Name: Platform (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11669,7 +11669,7 @@ MonoBehaviour:
   isGrounded: 0
   maxSpeed: 5
   playerIsMoving: 0
-  gravity: -265
+  gravity: -9.81
   ExtraJumpsInAir: 0
   glideFactor: 0.3
   m_MovementSmoothing: 0.3
@@ -11792,7 +11792,7 @@ GameObject:
   - component: {fileID: 1876358642}
   m_Layer: 0
   m_Name: Platform (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12173,7 +12173,7 @@ GameObject:
   - component: {fileID: 1892207135}
   m_Layer: 0
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13802,7 +13802,7 @@ GameObject:
   - component: {fileID: 2040881284}
   m_Layer: 0
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

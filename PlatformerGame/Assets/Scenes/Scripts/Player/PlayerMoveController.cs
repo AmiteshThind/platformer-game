@@ -66,8 +66,8 @@ public class PlayerMoveController : MonoBehaviour
         //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
 		if (!jump & jumpJoyButton.Pressed && (isGrounded || ExtraJumpCount != 0))
 		{
-            
 
+            print("reached here");
 			jump = true;
             //playerRigidBody.velocity += Vector2.up * jumpVelocity;
             playerRigidBody.AddForce(new Vector2(0f,jumpVelocity),ForceMode2D.Impulse);
