@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     public bool DashCharged = true; 
-    public float DashForceX = 50f;
-    public float DashForceY = 25f; 
-    public float StartDashTimer = 0.15f;
+    public float DashForceValue = 20f;
+    private float DashForce; 
+    public float StartDashTimer = 0.05f;
     float CurrentDashTimer;
-    float DashDirection; 
+    Rigidbody2D playerRigidBody; 
     private float moveHorizontalKeyBoardInput,moveHorizontalJoyStickInput;
     private float moveVerticalKeyBoardInput, moveVerticalJoyStickInput;
     public bool isDashing;
@@ -25,6 +25,7 @@ public class PlayerDash : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         joystick = FindObjectOfType<Joystick>();
         dashbutton = FindObjectOfType<DashButton>();
+        playerRigidBody = GetComponent<Rigidbody2D>();
 
     }
 
@@ -36,7 +37,29 @@ public class PlayerDash : MonoBehaviour
         moveVerticalKeyBoardInput = Input.GetAxis("Vertical");
         moveHorizontalJoyStickInput = joystick.Horizontal;
         moveVerticalJoyStickInput = joystick.Vertical;
-       
+
+        if (joystick.Horizontal > 0.2f)
+        {
+            moveHorizontalJoyStickInput = 1; 
+        }else if(joystick.Horizontal < -0.2f)
+        {
+            moveHorizontalJoyStickInput = -1; 
+        }
+        else { moveHorizontalJoyStickInput = 0f;  }
+
+
+        if (joystick.Vertical > 0.4f)
+        {
+            moveVerticalJoyStickInput = 1;
+        }
+        else if (joystick.Vertical < -0.4f)
+        {
+            moveVerticalJoyStickInput = -1;
+        }
+        else
+        {
+            moveVerticalJoyStickInput = 0f; 
+        }
 
         //if ((moveHorizontalKeyBoardInput >0 || moveHorizontalJoyStickInput > 0))
         //{
@@ -50,8 +73,8 @@ public class PlayerDash : MonoBehaviour
         //{
         //    DashDirection = 0; 
         //}
-      
-     
+
+
     }
 
     void FixedUpdate()
@@ -74,15 +97,32 @@ public class PlayerDash : MonoBehaviour
             DashCharged = false;
             CurrentDashTimer = StartDashTimer;
             rb.velocity = Vector2.zero;
+             
             //DashDirection = (int)moveHorizontalJoyStickInput; // Change To joystick if using joystick
 
         }
 
         if (isDashing)
-        {
-            rb.velocity = new Vector2(DashForceX*moveHorizontalJoyStickInput,DashForceY*moveVerticalJoyStickInput);
+        { 
+            
+            Vector2 dir = new Vector2(joystick.Horizontal, joystick.Vertical);
+            print("dir"+dir.normalized);
+
+
+            if (Mathf.Abs(joystick.Vertical) > 0.5f && Mathf.Abs(joystick.Horizontal)<0.2f)
+            {
+                DashForce = DashForceValue-4f;
+            }
+            else {
+                DashForce = DashForceValue;
+            }
+
+            rb.velocity = dir.normalized*DashForce;
             CurrentDashTimer -= Time.deltaTime;
+            print("horizonal "+moveHorizontalJoyStickInput);
+            print("vertical"+ moveVerticalJoyStickInput);
         }
+         
 
         if (CurrentDashTimer <= 0)
         {
