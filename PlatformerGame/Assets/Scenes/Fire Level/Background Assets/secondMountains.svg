@@ -1,1 +1,76 @@
-<svg id="_ÎÓÈ_1" data-name="—ÎÓÈ_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10091.31 1608.09"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="5045.65" y1="1018.39" x2="5045.65" y2="184.43" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#527587"/><stop offset="0.44" stop-color="#9c9a9a"/><stop offset="1" stop-color="#ffccb3"/></linearGradient></defs><polygon class="cls-1" points="0 116.52 812.5 466.1 1451.83 116.52 2675.87 632.78 3246.69 250.01 3759.33 165.16 4321.8 627.95 4774.54 537.43 5352.53 65.48 6203.75 322.6 6968.93 34.26 7665.43 288.39 8454.43 0 10091.3 404.41 10091.31 1608.09 0.01 1608.09 0 116.52"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="secondMountains.svg"
+   version="1.1"
+   viewBox="0 0 10091.31 1608.09"
+   data-name="—ÎÓÈ_1"
+   id="_ÎÓÈ_1">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="_ÎÓÈ_1"
+     inkscape:window-maximized="0"
+     inkscape:window-y="117"
+     inkscape:window-x="0"
+     inkscape:cy="37.373775"
+     inkscape:cx="5045.655"
+     inkscape:zoom="0.10434721"
+     showgrid="false"
+     id="namedview24"
+     inkscape:window-height="800"
+     inkscape:window-width="1280"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs19">
+    <style
+       id="style10">.cls-1{fill:url(#linear-gradient);}</style>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="184.43"
+       x2="5045.65"
+       y1="1018.39"
+       x1="5045.65"
+       id="linear-gradient">
+      <stop
+         id="stop12"
+         stop-color="#527587"
+         offset="0" />
+      <stop
+         id="stop14"
+         stop-color="#9c9a9a"
+         offset="0.44" />
+      <stop
+         id="stop16"
+         stop-color="#ffccb3"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <polygon
+     id="polygon21"
+     points="0 116.52 812.5 466.1 1451.83 116.52 2675.87 632.78 3246.69 250.01 3759.33 165.16 4321.8 627.95 4774.54 537.43 5352.53 65.48 6203.75 322.6 6968.93 34.26 7665.43 288.39 8454.43 0 10091.3 404.41 10091.31 1608.09 0.01 1608.09 0 116.52"
+     class="cls-1" />
+</svg>
