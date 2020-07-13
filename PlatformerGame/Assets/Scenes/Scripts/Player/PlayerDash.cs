@@ -12,6 +12,7 @@ public class PlayerDash : MonoBehaviour
     float CurrentDashTimer;
     float CurrentAirDashTimer;
     public float AirDashDuration = 0.05f;
+    public ParticleSystem DashEffect;
 
     public bool AirDashUsed = false; 
     Rigidbody2D playerRigidBody; 
@@ -152,7 +153,7 @@ public class PlayerDash : MonoBehaviour
         {
             if (playerMoveController.isGrounded && moveHorizontalJoyStickInput != 0)
             {
-
+                CreateDashTrail();
                 rb.velocity = new Vector2(DashForceValueX * moveHorizontalJoyStickInput, 0);
                 //  print("worked");
             }
@@ -171,7 +172,7 @@ public class PlayerDash : MonoBehaviour
         {
             print("DASHINAIRDAHSINRIAR");
             AirDashUsed = true;
-
+            CreateDashTrail();
             Vector2 dir = new Vector2(joystick.Horizontal, joystick.Vertical);
             //  print("dir" + dir.normalized);
             DashForce = new Vector2(DashForceValueX, DashForceValueY);
@@ -205,6 +206,9 @@ public class PlayerDash : MonoBehaviour
     }
 
 
-
+    void CreateDashTrail()
+    {
+        DashEffect.Play();
+    }
    }
  
