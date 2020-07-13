@@ -7351,7 +7351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6, y: -0.03999996, z: -10}
+  m_LocalPosition: {x: -2.7056, y: -4.72, z: -10.10449}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8687,7 +8687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302339117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7056, y: -4.72, z: -10.10449}
+  m_LocalPosition: {x: 9.5, y: -2.9999995, z: -10.10449}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1967983870}
@@ -8708,7 +8708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1942652682}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!1001 &1314619673
@@ -12686,7 +12686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1302339117}
-  parallaxEffect: 0.9
+  parallaxEffect: 0.91
 --- !u!1001 &1789635940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12837,11 +12837,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7056
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.12
+      value: -8.4
       objectReference: {fileID: 0}
     - target: {fileID: 4210157123753652, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13603,7 +13603,7 @@ MonoBehaviour:
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 0
-  maxSpeed: 10
+  maxSpeed: 6
   playerIsMoving: 0
   gravity: -9.81
   ExtraJumpsInAir: 0
@@ -13974,6 +13974,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1302339117}
   parallaxEffect: 0.9
+--- !u!1 &1942652681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1942652683}
+  - component: {fileID: 1942652682}
+  m_Layer: 0
+  m_Name: BackgroundBoundaries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1942652682
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942652681}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: -89.84056, y: 0.41765487}
+      - {x: -90.03518, y: -27.865276}
+      - {x: -90.5394, y: -56.510265}
+      - {x: 200.66281, y: -59.208138}
+      - {x: 325.5315, y: -60.40838}
+      - {x: 319.11697, y: -0.30549622}
+--- !u!4 &1942652683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942652681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 85.493675, y: 31.52237, z: -254.49716}
+  m_LocalScale: {x: 1.1125, y: 0.9625, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1953871959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14118,7 +14181,7 @@ MonoBehaviour:
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 1
   m_XDamping: 1
-  m_YDamping: 15
+  m_YDamping: 0
   m_ZDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.8
@@ -14126,9 +14189,9 @@ MonoBehaviour:
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
-  m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_UnlimitedSoftZone: 1
+  m_SoftZoneWidth: 2
+  m_SoftZoneHeight: 2
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
