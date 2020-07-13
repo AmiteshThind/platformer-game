@@ -64,11 +64,13 @@ public class PlayerMoveController : MonoBehaviour
 		ApplyInput();
 		 
         //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-		if (!jump & (jumpJoyButton.Pressed || Input.GetButtonDown("Jump")) && (isGrounded || ExtraJumpCount != 0))
+		if (!jump & (jumpJoyButton.Pressed || Input.GetButtonDown("Jump")) && (isGrounded))
 		{
 			jump = true;
+            print("HOW");
             //playerRigidBody.velocity += Vector2.up * jumpVelocity;
             playerRigidBody.AddForce(new Vector2(0f,jumpVelocity),ForceMode2D.Impulse);
+            isGrounded = false;
             ExtraJumpCount--;
             animator.SetBool("inAir", true);
         }
@@ -77,7 +79,8 @@ public class PlayerMoveController : MonoBehaviour
         if (jump && (!(jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))))
 		{
 			jump = false;
-		}
+            isGrounded = false;
+        }
 
         if (isGrounded)
         {
@@ -93,7 +96,7 @@ public class PlayerMoveController : MonoBehaviour
 		else 
 		{
             //playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
-            playerRigidBody.gravityScale = 6f;
+           playerRigidBody.gravityScale = 5f;
         }
 	}
 
@@ -127,7 +130,7 @@ public class PlayerMoveController : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D other)
     {
-                isGrounded = false;
+              //  isGrounded = false;
        
     }
 
