@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Bar
+  - DeadGround
   layers:
   - Default
   - TransparentFX

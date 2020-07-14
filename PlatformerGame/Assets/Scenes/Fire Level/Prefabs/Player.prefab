@@ -5117,12 +5117,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bf2b4af3ca545c085f148be3c31b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 0
+  jumpPressed: 0
   jumpVelocity: 15
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 0
-  maxSpeed: 6
+  maxSpeed: 7
   playerIsMoving: 0
   gravity: -9.81
   ExtraJumpsInAir: 0
