@@ -12912,12 +12912,12 @@ PrefabInstance:
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: dashSpeed
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: maxDashDuration
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
@@ -12928,6 +12928,16 @@ PrefabInstance:
         type: 3}
       propertyPath: glideFactor
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: maxGroundDashes
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: dashRechargeTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5040845001323594143, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
@@ -13024,7 +13034,8 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 17
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5039589780054138341, guid: 8980a07ac47194937a8cef37d84f2f52, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8980a07ac47194937a8cef37d84f2f52, type: 3}
 --- !u!1001 &618023603
 PrefabInstance:
@@ -23206,7 +23217,7 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.618532
+      value: -27.155682
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931988, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}

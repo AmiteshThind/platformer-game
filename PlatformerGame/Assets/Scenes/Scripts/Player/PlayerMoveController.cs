@@ -15,7 +15,7 @@ public class PlayerMoveController : MonoBehaviour
     public float fallMultipler = 0.022f;// gravity factor when player reaches peak
     public float lowJumpMultiplier = 0.1f; // gravity factor for when player performs a low jump 
     public bool isGrounded;
-    public float maxSpeed = 5f;
+    public float maxSpeed = 10f;
     public bool playerIsMoving;
     private bool isFacingRight;
     public float gravity = -265f;
@@ -31,13 +31,16 @@ public class PlayerMoveController : MonoBehaviour
 	public bool isDashing;
 	public float dashSpeed;
 	private Vector2 dashDir;
-	private int dashCount;
+	private int groundDashCount;
+	private int airDashCount;
+	public int maxAirDashes = 1;
 	private float dashDuration;
 	public float maxDashDuration;
 	public float dashRechargeTime;
 	private float groundDashRechargeTime;
 	public float maxGroundDashes;
 	bool jumpHeld;
+	public float input;
 	void Start()
     {
         isFacingRight = true;
@@ -55,8 +58,10 @@ public class PlayerMoveController : MonoBehaviour
     {
 		if (!playerDead)
 		{
+
 			jumpHeld = (jumpJoyButton.Pressed || Input.GetButton("Jump"));
-			float input = joystick.Horizontal + Input.GetAxis("Horizontal");
+			input = joystick.Horizontal + Input.GetAxis("Horizontal");
+
 			bool isMoving = Mathf.Abs(input) > 0;
 			bool movingRight = input > 0;
 			if (jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))
@@ -70,16 +75,17 @@ public class PlayerMoveController : MonoBehaviour
 					FlipPlayer();
 			}
 
-			//if (dashCount == maxGroundDashes && groundDashRechargeTime > 0)
-			//{
-			//	groundDashRechargeTime -= Time.deltaTime;
-			//}
-			//if (dashCount == maxGroundDashes && groundDashRechargeTime <= 0)
-			//{
-			//	dashCount = 0;
-			//	groundDashRechargeTime = dashRechargeTime;
-			//}
+			if (groundDashCount == maxGroundDashes && groundDashRechargeTime > 0)
+			{
+				groundDashRechargeTime -= Time.deltaTime;
+			}
+			if (groundDashCount == maxGroundDashes && groundDashRechargeTime <= 0)
+			{
+				groundDashCount = 0;
+				groundDashRechargeTime = dashRechargeTime;
+			}
 
+			
 			if (!isDashing)
 			{
 				if (Input.GetKeyDown(KeyCode.LeftShift)) // p
@@ -89,9 +95,19 @@ public class PlayerMoveController : MonoBehaviour
 					mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 					dashDir = new Vector2(mousePosition.x - playerRigidBody.position.x, mousePosition.y - playerRigidBody.position.y);
 					dashDir.Normalize();
-					// if (dashCount < maxGroundDashes)
-					isDashing = true;
-					// dashCount++;
+					if (!isGrounded)
+					{
+						if (airDashCount < maxAirDashes)
+						{
+							airDashCount++;
+							isDashing = true;
+						}
+					}
+					else if (groundDashCount < maxGroundDashes)
+					{
+						isDashing = true;
+						groundDashCount++;
+					}
 				}
 			}
 		}
@@ -123,7 +139,7 @@ public class PlayerMoveController : MonoBehaviour
 					}
 					else
 					{
-						Vector2 groundDashDir = new Vector2(dashDir.x > 0 ? 1 : 1, 0);
+						Vector2 groundDashDir = new Vector2(input > 0 ? 1 : -1, 0);
 						playerRigidBody.velocity = groundDashDir * dashSpeed;
 					}
 				}
@@ -177,6 +193,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground" && isGrounded == false)
         {
+			airDashCount = 0;
             isGrounded = true;
 			jumpPressed = false;
             animator.SetBool("inAir", false);
@@ -187,6 +204,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground" && isGrounded == true)
         {
+			airDashCount = 0;
 			jumpPressed = false;
 			isGrounded = true;
            
