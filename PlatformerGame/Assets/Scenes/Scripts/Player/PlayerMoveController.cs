@@ -20,6 +20,7 @@ public class PlayerMoveController : MonoBehaviour
     private bool isFacingRight;
     public float gravity = -265f;
     private int ExtraJumpCount = 0;
+	public bool playerDead = false; 
     public int ExtraJumpsInAir = 0;
     [Range(0,1f)]public float glideFactor = 0.003f;
     Animator animator;
@@ -51,109 +52,113 @@ public class PlayerMoveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		float input = joystick.Horizontal + Input.GetAxis("Horizontal");
-		bool isMoving = Mathf.Abs(input) > 0;
-		bool movingRight = input > 0;
-		if (jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))
-			jumpPressed = true;
-		animator.SetBool("isMoving", isMoving);
-		if (isMoving)
+		if (!playerDead)
 		{
-			if (!movingRight && isFacingRight)
-				FlipPlayer();
-			else if (movingRight && !isFacingRight)
-				FlipPlayer();
-		}
-
-		//if (dashCount == maxGroundDashes && groundDashRechargeTime > 0)
-		//{
-		//	groundDashRechargeTime -= Time.deltaTime;
-		//}
-		//if (dashCount == maxGroundDashes && groundDashRechargeTime <= 0)
-		//{
-		//	dashCount = 0;
-		//	groundDashRechargeTime = dashRechargeTime;
-		//}
-
-		if (!isDashing)
-		{
-			if (Input.GetKeyDown(KeyCode.LeftShift)) // p
+			float input = joystick.Horizontal + Input.GetAxis("Horizontal");
+			bool isMoving = Mathf.Abs(input) > 0;
+			bool movingRight = input > 0;
+			if (jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))
+				jumpPressed = true;
+			animator.SetBool("isMoving", isMoving);
+			if (isMoving)
 			{
-				Vector3 mousePosition = Input.mousePosition;
-				mousePosition.z = Camera.main.nearClipPlane;
-				mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-				dashDir = new Vector2(mousePosition.x - playerRigidBody.position.x, mousePosition.y - playerRigidBody.position.y);
-				dashDir.Normalize();
-				// if (dashCount < maxGroundDashes)
-				isDashing = true;
-				// dashCount++;
+				if (!movingRight && isFacingRight)
+					FlipPlayer();
+				else if (movingRight && !isFacingRight)
+					FlipPlayer();
+			}
+
+			//if (dashCount == maxGroundDashes && groundDashRechargeTime > 0)
+			//{
+			//	groundDashRechargeTime -= Time.deltaTime;
+			//}
+			//if (dashCount == maxGroundDashes && groundDashRechargeTime <= 0)
+			//{
+			//	dashCount = 0;
+			//	groundDashRechargeTime = dashRechargeTime;
+			//}
+
+			if (!isDashing)
+			{
+				if (Input.GetKeyDown(KeyCode.LeftShift)) // p
+				{
+					Vector3 mousePosition = Input.mousePosition;
+					mousePosition.z = Camera.main.nearClipPlane;
+					mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+					dashDir = new Vector2(mousePosition.x - playerRigidBody.position.x, mousePosition.y - playerRigidBody.position.y);
+					dashDir.Normalize();
+					// if (dashCount < maxGroundDashes)
+					isDashing = true;
+					// dashCount++;
+				}
 			}
 		}
-
 	}
 
     // Used for handling any physics/manipulation of rigidbody
     private void FixedUpdate()
     {
 		//shrinkPlayer();
-
-		// Handle Horizontal Movement
-		if(isDashing)
+		if (!playerDead)
 		{
-			if (dashDuration <= 0)
+			// Handle Horizontal Movement
+			if (isDashing)
 			{
-				isDashing = false;
-				dashDir = Vector2.zero;
-				dashDuration = maxDashDuration;
-				playerRigidBody.velocity = Vector2.zero;
-			}
-			else
-			{
-				dashDuration -= Time.deltaTime;
-				bool airDash = !isGrounded;
-				if (airDash)
+				if (dashDuration <= 0)
 				{
-					playerRigidBody.velocity = dashDir * dashSpeed;
+					isDashing = false;
+					dashDir = Vector2.zero;
+					dashDuration = maxDashDuration;
+					playerRigidBody.velocity = Vector2.zero;
 				}
 				else
 				{
-					Vector2 groundDashDir = new Vector2(dashDir.x > 0 ? 1 : 1, 0);
-					playerRigidBody.velocity = groundDashDir * dashSpeed;
+					dashDuration -= Time.deltaTime;
+					bool airDash = !isGrounded;
+					if (airDash)
+					{
+						playerRigidBody.velocity = dashDir * dashSpeed;
+					}
+					else
+					{
+						Vector2 groundDashDir = new Vector2(dashDir.x > 0 ? 1 : 1, 0);
+						playerRigidBody.velocity = groundDashDir * dashSpeed;
+					}
 				}
 			}
-		}
-		else
-		{
-			ApplyInput();
-		}
-		
-	
-		//Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-		if (jumpPressed && isGrounded)
-		{
-			jumpPressed = false; 
-            playerRigidBody.AddForce(new Vector2(0f,jumpVelocity),ForceMode2D.Impulse);
-            isGrounded = false;
-            ExtraJumpCount--;
-            animator.SetBool("inAir", true);
-        }
+			else
+			{
+				ApplyInput();
+			}
 
-        if (isGrounded) 
-        {
-            ExtraJumpCount = ExtraJumpsInAir;
-        }
 
-		bool jumpHeld = (jumpJoyButton.Pressed || Input.GetButton("Jump"));
-		if (playerRigidBody.velocity.y <= 0 && jumpHeld)
-		{
-            playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
-                
+			//Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
+			if (jumpPressed && isGrounded)
+			{
+				jumpPressed = false;
+				playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
+				isGrounded = false;
+				ExtraJumpCount--;
+				animator.SetBool("inAir", true);
+			}
+
+			if (isGrounded)
+			{
+				ExtraJumpCount = ExtraJumpsInAir;
+			}
+
+			bool jumpHeld = (jumpJoyButton.Pressed || Input.GetButton("Jump"));
+			if (playerRigidBody.velocity.y <= 0 && jumpHeld)
+			{
+				playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
+
+			}
+			else
+			{
+				//playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
+				playerRigidBody.gravityScale = 5f;
+			}
 		}
-		else 
-		{
-            //playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
-           playerRigidBody.gravityScale = 5f;
-        }
 	}
 
 	public void ApplyInput()

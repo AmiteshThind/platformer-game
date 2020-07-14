@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class SceneManagement : MonoBehaviour
 {
+    PlayerMoveController playerMoveController;
  
     // Start is called before the first frame update
     void Start()
     {
-    
+        playerMoveController = GetComponent<PlayerMoveController>();
+    }
+
+    IEnumerator MyMethod()
+    {
+        Debug.Log("Before Waiting 1 seconds");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Update is called once per frame
@@ -23,8 +32,9 @@ public class SceneManagement : MonoBehaviour
     {
         if(collision.gameObject.tag == "DeadGround")
         {
+            playerMoveController.playerDead = true; 
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(MyMethod());
         }
     }
 
