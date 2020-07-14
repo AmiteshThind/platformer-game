@@ -37,6 +37,7 @@ public class PlayerMoveController : MonoBehaviour
 	public float dashRechargeTime;
 	private float groundDashRechargeTime;
 	public float maxGroundDashes;
+	bool jumpHeld;
 	void Start()
     {
         isFacingRight = true;
@@ -54,6 +55,7 @@ public class PlayerMoveController : MonoBehaviour
     {
 		if (!playerDead)
 		{
+			jumpHeld = (jumpJoyButton.Pressed || Input.GetButton("Jump"));
 			float input = joystick.Horizontal + Input.GetAxis("Horizontal");
 			bool isMoving = Mathf.Abs(input) > 0;
 			bool movingRight = input > 0;
@@ -147,7 +149,7 @@ public class PlayerMoveController : MonoBehaviour
 				ExtraJumpCount = ExtraJumpsInAir;
 			}
 
-			bool jumpHeld = (jumpJoyButton.Pressed || Input.GetButton("Jump"));
+			 
 			if (playerRigidBody.velocity.y <= 0 && jumpHeld)
 			{
 				playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
