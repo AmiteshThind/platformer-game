@@ -69,6 +69,30 @@ public class PlayerDash : MonoBehaviour
         }
 
 
+
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || dashbutton.Pressed))
+        {
+            print(playerMoveController.isGrounded);
+            if (DashCharged && playerMoveController.isGrounded)
+            {
+                isDashing = true;
+                DashCharged = false;
+                CurrentDashTimer = GroundDashDuration;
+            }
+
+            else if (!playerMoveController.isGrounded)
+            {
+                if (!AirDashUsed)
+                {
+                    isDashingInAir = true;
+                    CurrentAirDashTimer = AirDashDuration;
+                }
+            }
+
+
+        }
+
+
         //if (joystick.Horizontal > 0.02f)
         //{
         //    moveHorizontalJoyStickInput = 1; 
@@ -123,28 +147,6 @@ public class PlayerDash : MonoBehaviour
             }
         }
 
-
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || dashbutton.Pressed))
-        {
-            print(playerMoveController.isGrounded);
-            if (DashCharged && playerMoveController.isGrounded)
-            {
-                isDashing = true;
-                DashCharged = false;
-                CurrentDashTimer = GroundDashDuration;
-            }
-
-            else if (!playerMoveController.isGrounded)
-            {
-                if (!AirDashUsed)
-                {
-                    isDashingInAir = true;
-                    CurrentAirDashTimer = AirDashDuration;
-                }
-            }
-
-
-        }
 
 
 
