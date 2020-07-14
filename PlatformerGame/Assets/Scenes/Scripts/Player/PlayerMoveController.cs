@@ -25,6 +25,17 @@ public class PlayerMoveController : MonoBehaviour
     Animator animator;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
+
+	/* Dashing Vars*/
+	public bool isDashing;
+	public float dashSpeed;
+	private Vector2 dashDir;
+	private int dashCount;
+	private float dashDuration;
+	public float maxDashDuration;
+	public float dashRechargeTime;
+	private float groundDashRechargeTime;
+	public float maxGroundDashes;
 	void Start()
     {
         isFacingRight = true;
@@ -53,7 +64,32 @@ public class PlayerMoveController : MonoBehaviour
 			else if (movingRight && !isFacingRight)
 				FlipPlayer();
 		}
-		
+
+		//if (dashCount == maxGroundDashes && groundDashRechargeTime > 0)
+		//{
+		//	groundDashRechargeTime -= Time.deltaTime;
+		//}
+		//if (dashCount == maxGroundDashes && groundDashRechargeTime <= 0)
+		//{
+		//	dashCount = 0;
+		//	groundDashRechargeTime = dashRechargeTime;
+		//}
+
+		if (!isDashing)
+		{
+			if (Input.GetKeyDown(KeyCode.LeftShift)) // p
+			{
+				Vector3 mousePosition = Input.mousePosition;
+				mousePosition.z = Camera.main.nearClipPlane;
+				mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+				dashDir = new Vector2(mousePosition.x - playerRigidBody.position.x, mousePosition.y - playerRigidBody.position.y);
+				dashDir.Normalize();
+				// if (dashCount < maxGroundDashes)
+				isDashing = true;
+				// dashCount++;
+			}
+		}
+
 	}
 
     // Used for handling any physics/manipulation of rigidbody
@@ -62,7 +98,35 @@ public class PlayerMoveController : MonoBehaviour
 		//shrinkPlayer();
 
 		// Handle Horizontal Movement
-		ApplyInput();
+		if(isDashing)
+		{
+			if (dashDuration <= 0)
+			{
+				isDashing = false;
+				dashDir = Vector2.zero;
+				dashDuration = maxDashDuration;
+				playerRigidBody.velocity = Vector2.zero;
+			}
+			else
+			{
+				dashDuration -= Time.deltaTime;
+				bool airDash = !isGrounded;
+				if (airDash)
+				{
+					playerRigidBody.velocity = dashDir * dashSpeed;
+				}
+				else
+				{
+					Vector2 groundDashDir = new Vector2(dashDir.x > 0 ? 1 : 1, 0);
+					playerRigidBody.velocity = groundDashDir * dashSpeed;
+				}
+			}
+		}
+		else
+		{
+			ApplyInput();
+		}
+		
 	
 		//Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
 		if (jumpPressed && isGrounded)
