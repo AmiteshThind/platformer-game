@@ -10,7 +10,7 @@ public class PlayerMoveController : MonoBehaviour
     private Joystick joystick;
     private JumpJoyButton jumpJoyButton;
     Rigidbody2D playerRigidBody;
-    public bool jump;
+    public bool jumpPressed;
     public float jumpVelocity=42f;
     public float fallMultipler = 0.022f;// gravity factor when player reaches peak
     public float lowJumpMultiplier = 0.1f; // gravity factor for when player performs a low jump 
@@ -43,8 +43,9 @@ public class PlayerMoveController : MonoBehaviour
 		float input = joystick.Horizontal + Input.GetAxis("Horizontal");
 		bool isMoving = Mathf.Abs(input) > 0;
 		bool movingRight = input > 0;
-
-        animator.SetBool("isMoving", isMoving);
+		if (jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))
+			jumpPressed = true;
+		animator.SetBool("isMoving", isMoving);
 		if (isMoving)
 		{
 			if (!movingRight && isFacingRight)
@@ -62,33 +63,24 @@ public class PlayerMoveController : MonoBehaviour
 
 		// Handle Horizontal Movement
 		ApplyInput();
-		 
-        //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-		if (!jump & (jumpJoyButton.Pressed || Input.GetButtonDown("Jump")) && (isGrounded))
+	
+		//Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
+		if (jumpPressed && isGrounded)
 		{
-			jump = true;
-            print("HOW");
-            //playerRigidBody.velocity += Vector2.up * jumpVelocity;
+			jumpPressed = false; 
             playerRigidBody.AddForce(new Vector2(0f,jumpVelocity),ForceMode2D.Impulse);
             isGrounded = false;
             ExtraJumpCount--;
             animator.SetBool("inAir", true);
         }
 
-        //Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-        if (jump && (!(jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))))
-		{
-			jump = false;
-            isGrounded = false;
-        }
-
-        if (isGrounded)
+        if (isGrounded) 
         {
             ExtraJumpCount = ExtraJumpsInAir;
         }
-        
 
-		if (playerRigidBody.velocity.y <= 0 && (jumpJoyButton.Pressed || Input.GetButtonDown("Jump")))
+		bool jumpHeld = (jumpJoyButton.Pressed || Input.GetButton("Jump"));
+		if (playerRigidBody.velocity.y <= 0 && jumpHeld)
 		{
             playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
                 
@@ -123,7 +115,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground" && isGrounded == true)
         {
-            isGrounded = true;
+			isGrounded = true;
            
         }
     }
