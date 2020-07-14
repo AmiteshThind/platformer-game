@@ -107,6 +107,7 @@ public class PlayerMoveController : MonoBehaviour
         if (other.gameObject.tag == "Ground" && isGrounded == false)
         {
             isGrounded = true;
+			jumpPressed = false;
             animator.SetBool("inAir", false);
         }
     }
@@ -115,6 +116,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground" && isGrounded == true)
         {
+			jumpPressed = false;
 			isGrounded = true;
            
         }
