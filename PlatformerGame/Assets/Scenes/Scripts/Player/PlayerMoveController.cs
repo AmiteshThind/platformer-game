@@ -162,6 +162,7 @@ public class PlayerMoveController : MonoBehaviour
 
 			if (isGrounded)
 			{
+				jumpHeld = false;
 				ExtraJumpCount = ExtraJumpsInAir;
 			}
 
