@@ -1041,6 +1041,11 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6948860157570523221, guid: 1ac100812e345485e8a987319cfef17d,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 73259e7bd24ad43e38d04594b8506333, type: 2}
     - target: {fileID: 6948860157936704880, guid: 1ac100812e345485e8a987319cfef17d,
         type: 3}
       propertyPath: m_LocalPosition.x
