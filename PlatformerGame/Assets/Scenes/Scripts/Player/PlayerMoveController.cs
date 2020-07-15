@@ -272,15 +272,15 @@ public class PlayerMoveController : MonoBehaviour
         if (other.gameObject.tag == "Ground" && isGrounded == true)
         {
 			airDashCount = 0;
-		//	jumpPressed = false;
-		//	jumpJoyButton.Pressed = false;
+			jumpPressed = false;
+			jumpJoyButton.Pressed = false;
 			isGrounded = true;
            
         }
 		if (other.gameObject.tag == "Wall" && isTouchingWall)
 		{
 			isTouchingWall = true;
-			//airDashCount = 0;
+			airDashCount = 0;
 		}
 	}
 
