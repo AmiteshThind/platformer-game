@@ -66,6 +66,7 @@ public class PlayerMoveController : MonoBehaviour
 			bool movingRight = input > 0;
 			if (jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))
 				jumpPressed = true;
+
 			animator.SetBool("isMoving", isMoving);
 			if (isMoving)
 			{
@@ -163,12 +164,14 @@ public class PlayerMoveController : MonoBehaviour
 			if (isGrounded)
 			{
 				jumpHeld = false;
+				jumpJoyButton.Pressed = false;
 				ExtraJumpCount = ExtraJumpsInAir;
 			}
 
-			 
+			print(jumpHeld);
 			if (playerRigidBody.velocity.y <= 0 && jumpHeld)
 			{
+				 
 				playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
 
 			}
@@ -197,7 +200,8 @@ public class PlayerMoveController : MonoBehaviour
 			airDashCount = 0;
             isGrounded = true;
 			jumpPressed = false;
-            animator.SetBool("inAir", false);
+			jumpJoyButton.Pressed = false;
+			animator.SetBool("inAir", false);
         }
     }
 
@@ -207,6 +211,7 @@ public class PlayerMoveController : MonoBehaviour
         {
 			airDashCount = 0;
 			jumpPressed = false;
+			jumpJoyButton.Pressed = false;
 			isGrounded = true;
            
         }
