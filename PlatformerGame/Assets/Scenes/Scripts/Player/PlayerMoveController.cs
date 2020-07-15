@@ -26,6 +26,15 @@ public class PlayerMoveController : MonoBehaviour
     Animator animator;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
+	bool isTouchingWall;
+	public Transform wallCheck;
+	bool wallSliding;
+	public float wallSlidingSpeed;
+	bool wallJumping;
+	public float xWallForce;
+	public float yWallForce;
+	public float wallJumpTime; 
+
 
 	/* Dashing Vars*/
 	public bool isDashing;
@@ -59,6 +68,8 @@ public class PlayerMoveController : MonoBehaviour
 		if (!playerDead)
 		{
 
+			
+
 			jumpHeld = (jumpJoyButton.Pressed || Input.GetButton("Jump"));
 			input = joystick.Horizontal + Input.GetAxis("Horizontal");
 
@@ -85,6 +96,20 @@ public class PlayerMoveController : MonoBehaviour
 				groundDashCount = 0;
 				groundDashRechargeTime = dashRechargeTime;
 			}
+			if(isTouchingWall && input != 0)
+            {
+				wallSliding = true;
+            }
+            else
+            {
+				wallSliding = false;
+            }
+
+            if (wallSliding)
+            {
+				playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, Mathf.Clamp(playerRigidBody.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            }
+
 
 			
 			if (!isDashing)
@@ -148,12 +173,24 @@ public class PlayerMoveController : MonoBehaviour
 			else
 			{
 				ApplyInput();
-			}
+			} 
 
+			if((Input.GetKey(KeyCode.Space) || jumpJoyButton.Pressed) && wallSliding == true)
+            {
+				wallJumping = true;
+				Invoke("SetWallJumpingToFalse", wallJumpTime);
+
+            }
+
+            if (wallJumping)
+            {
+				playerRigidBody.velocity = new Vector2(xWallForce * -input, yWallForce);
+            }
 
 			//Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-			if (jumpPressed && isGrounded)
+			if (jumpPressed && isGrounded && !wallJumping)
 			{
+				print("jump");
 				jumpPressed = false;
 				playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
 				isGrounded = false;
@@ -175,7 +212,7 @@ public class PlayerMoveController : MonoBehaviour
 				playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
 
 			}
-			else
+			else if(!wallJumping)
 			{
 				//playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
 				playerRigidBody.gravityScale = 5f;
@@ -203,6 +240,17 @@ public class PlayerMoveController : MonoBehaviour
 			jumpJoyButton.Pressed = false;
 			animator.SetBool("inAir", false);
         }
+		if(other.gameObject.tag == "Wall")
+        {
+			isTouchingWall = true;
+			//airDashCount = 0;
+			print("touched");
+		}
+        else
+        {
+			isTouchingWall = false; 
+        }
+		
     }
 
     void OnCollisionStay2D(Collision2D other)
@@ -210,16 +258,23 @@ public class PlayerMoveController : MonoBehaviour
         if (other.gameObject.tag == "Ground" && isGrounded == true)
         {
 			airDashCount = 0;
-			jumpPressed = false;
-			jumpJoyButton.Pressed = false;
+		//	jumpPressed = false;
+		//	jumpJoyButton.Pressed = false;
 			isGrounded = true;
            
         }
-    }
+		if (other.gameObject.tag == "Wall" && isTouchingWall)
+		{
+			isTouchingWall = true;
+			//airDashCount = 0;
+		}
+	}
 
     void OnCollisionExit2D(Collision2D other)
     {
-              //  isGrounded = false;
+		//  isGrounded = false;
+		isTouchingWall = false;
+
        
     }
 
@@ -232,6 +287,11 @@ public class PlayerMoveController : MonoBehaviour
            
         }
         
+    }
+
+	void SetWallJumpingToFalse()
+    {
+		wallJumping = false; 
     }
 
     void FlipPlayer()

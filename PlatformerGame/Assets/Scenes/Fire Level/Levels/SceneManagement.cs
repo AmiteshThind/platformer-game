@@ -16,8 +16,8 @@ public class SceneManagement : MonoBehaviour
 
     IEnumerator MyMethod()
     {
-        Debug.Log("Before Waiting 1 seconds");
-        yield return new WaitForSeconds(1);
+        Debug.Log("Before Waiting 2 seconds");
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
