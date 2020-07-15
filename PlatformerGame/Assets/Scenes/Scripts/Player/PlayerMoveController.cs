@@ -37,6 +37,7 @@ public class PlayerMoveController : MonoBehaviour
 
 
 	/* Dashing Vars*/
+	DashButton dashbutton;
 	public bool isDashing;
 	public float dashSpeed;
 	private Vector2 dashDir;
@@ -57,7 +58,8 @@ public class PlayerMoveController : MonoBehaviour
         isGrounded = false;
         joystick = FindObjectOfType<Joystick>();
         jumpJoyButton = FindObjectOfType<JumpJoyButton>();
-        animator = GetComponent<Animator>();
+		dashbutton = FindObjectOfType<DashButton>();
+		animator = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody2D>();
         //Physics2D.gravity = new Vector2(0f,gravity);
     }
@@ -114,13 +116,24 @@ public class PlayerMoveController : MonoBehaviour
 			
 			if (!isDashing)
 			{
-				if (Input.GetKeyDown(KeyCode.LeftShift)) // p
+				bool keyboardDash = Input.GetKeyDown(KeyCode.LeftShift);
+				bool joyDash = dashbutton.Pressed;
+				if (keyboardDash || joyDash) // p
 				{
-					Vector3 mousePosition = Input.mousePosition;
-					mousePosition.z = Camera.main.nearClipPlane;
-					mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-					dashDir = new Vector2(mousePosition.x - playerRigidBody.position.x, mousePosition.y - playerRigidBody.position.y);
-					dashDir.Normalize();
+					if (keyboardDash) // get mouse position
+					{
+						Vector3 mousePosition = Input.mousePosition;
+						mousePosition.z = Camera.main.nearClipPlane;
+						mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+						dashDir = new Vector2(mousePosition.x - playerRigidBody.position.x, mousePosition.y - playerRigidBody.position.y);
+						dashDir.Normalize();
+					}
+					if (joyDash)
+					{
+						Vector2 dir = new Vector2(joystick.Horizontal, joystick.Vertical);
+						dashDir = dir.normalized;
+					}
+
 					if (!isGrounded)
 					{
 						if (airDashCount < maxAirDashes)
@@ -129,12 +142,13 @@ public class PlayerMoveController : MonoBehaviour
 							isDashing = true;
 						}
 					}
-					else if (groundDashCount < maxGroundDashes)
+					else if (groundDashCount < maxGroundDashes && input != 0)
 					{
 						isDashing = true;
 						groundDashCount++;
 					}
 				}
+				
 			}
 		}
 	}
