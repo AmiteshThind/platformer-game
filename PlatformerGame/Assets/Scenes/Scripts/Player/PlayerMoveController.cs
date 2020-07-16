@@ -26,11 +26,11 @@ public class PlayerMoveController : MonoBehaviour
     Animator animator;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
-	bool isTouchingWall;
+	public bool isTouchingWall;
 	public Transform wallCheck;
-	bool wallSliding;
+	public bool wallSliding;
 	public float wallSlidingSpeed;
-	bool wallJumping;
+	public bool wallJumping;
 	public float xWallForce;
 	public float yWallForce;
 	public float wallJumpTime; 
@@ -109,11 +109,12 @@ public class PlayerMoveController : MonoBehaviour
 
             if (wallSliding)
             {
+				jumpPressed = false; 
 				playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, Mathf.Clamp(playerRigidBody.velocity.y, -wallSlidingSpeed, float.MaxValue));
             }
 
+			 
 
-			
 			if (!isDashing)
 			{
 				bool keyboardDash = Input.GetKeyDown(KeyCode.LeftShift);
@@ -159,6 +160,15 @@ public class PlayerMoveController : MonoBehaviour
 		//shrinkPlayer();
 		if (!playerDead)
 		{
+			if ((Input.GetKeyDown(KeyCode.Space) || jumpJoyButton.Pressed) && wallSliding == true && !isGrounded)
+			{
+				jumpJoyButton.Pressed = false;
+				wallJumping = true;
+				jumpPressed = false;
+				Invoke("SetWallJumpingToFalse", wallJumpTime);
+
+
+			}
 			// Handle Horizontal Movement
 			if (isDashing)
 			{
@@ -189,21 +199,18 @@ public class PlayerMoveController : MonoBehaviour
 				ApplyInput();
 			} 
 
-			if((Input.GetKey(KeyCode.Space) || jumpJoyButton.Pressed) && wallSliding == true)
-            {
-				wallJumping = true;
-				Invoke("SetWallJumpingToFalse", wallJumpTime);
-
-            }
+			
 
             if (wallJumping)
             {
+				
 				playerRigidBody.velocity = new Vector2(xWallForce * -input, yWallForce);
             }
 
 			//Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
 			if (jumpPressed && isGrounded && !wallJumping)
 			{
+				
 				print("jump");
 				jumpPressed = false;
 				playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
@@ -220,7 +227,7 @@ public class PlayerMoveController : MonoBehaviour
 			}
 
 			print(jumpHeld);
-			if (playerRigidBody.velocity.y <= 0 && jumpHeld)
+			if (playerRigidBody.velocity.y <= 0 && jumpHeld && !wallJumping)
 			{
 				 
 				playerRigidBody.gravityScale = glideFactor * playerRigidBody.gravityScale;
@@ -253,41 +260,49 @@ public class PlayerMoveController : MonoBehaviour
 			jumpPressed = false;
 			jumpJoyButton.Pressed = false;
 			animator.SetBool("inAir", false);
-        }
-		if(other.gameObject.tag == "Wall")
+			print("GROUND");
+			wallJumping = false;
+			isTouchingWall = false;
+		}
+		else if(other.gameObject.tag == "Wall" && !isGrounded)
         {
 			isTouchingWall = true;
 			//airDashCount = 0;
 			print("touched");
+			isGrounded = false; 
 		}
-        else
-        {
-			isTouchingWall = false; 
-        }
+        
 		
     }
 
     void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Ground" && isGrounded == true)
+		if (other.gameObject.tag == "Wall" && !isGrounded)
+		{
+			isTouchingWall = true;
+			airDashCount = 0;
+			isGrounded =false;
+			print("touched");
+		}
+		else if (other.gameObject.tag == "Ground")
         {
 			airDashCount = 0;
 			jumpPressed = false;
 			jumpJoyButton.Pressed = false;
-			isGrounded = true;
-           
-        }
-		if (other.gameObject.tag == "Wall" && isTouchingWall)
-		{
-			isTouchingWall = true;
-			airDashCount = 0;
+			//isGrounded = true;
+			isTouchingWall = false;
+			print("griybd");
+
 		}
+		
 	}
 
     void OnCollisionExit2D(Collision2D other)
     {
-		//  isGrounded = false;
+		
 		isTouchingWall = false;
+		wallJumping = false;
+		
 
        
     }

@@ -5131,7 +5131,7 @@ MonoBehaviour:
   m_MovementSmoothing: 0.3
   wallCheck: {fileID: 0}
   wallSlidingSpeed: 0.5
-  xWallForce: 5
+  xWallForce: 2
   yWallForce: 10
   wallJumpTime: 0.12
   isDashing: 0
