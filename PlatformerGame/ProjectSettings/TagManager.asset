@@ -9,6 +9,8 @@ TagManager:
   - DeadGround
   - MovingPlatformDownTrigger
   - Wall
+  - MovingDownPlatform
+  - MovingUpPlatform
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - 
   - 
   - player
-  - 
-  - 
+  - ground
+  - wall
   - 
   - 
   - 

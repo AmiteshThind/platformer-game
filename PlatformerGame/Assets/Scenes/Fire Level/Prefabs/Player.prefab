@@ -5036,6 +5036,7 @@ Transform:
   - {fileID: 5035090146693455635}
   - {fileID: 5043954516386178425}
   - {fileID: 5039589780679017481}
+  - {fileID: 8448422242747726172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -5121,7 +5122,7 @@ MonoBehaviour:
   jumpVelocity: 15
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
-  isGrounded: 0
+  isGrounded: 1
   maxSpeed: 11
   playerIsMoving: 0
   gravity: -9.81
@@ -5129,11 +5130,19 @@ MonoBehaviour:
   ExtraJumpsInAir: 0
   glideFactor: 0.75
   m_MovementSmoothing: 0.3
-  wallCheck: {fileID: 0}
-  wallSlidingSpeed: 0.5
-  xWallForce: 2
-  yWallForce: 10
-  wallJumpTime: 0.12
+  isTouchingWall: 0
+  wallJumping: 0
+  wallCheckPoint: {fileID: 8448422242747726172}
+  wallCheckSize: {x: 0.2, y: 1.5}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  wallJumpTime: 0.2
+  wallSlideSpeed: 3
+  isWallSliding: 0
+  xWallForce: 6
+  yWallForce: 13
+  walljumpDirection: -1
   isDashing: 0
   dashSpeed: 50
   maxAirDashes: 3
@@ -5438,3 +5447,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8310711446807046098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8448422242747726172}
+  m_Layer: 0
+  m_Name: wallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8448422242747726172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310711446807046098}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.20222344, y: 0.2966527, z: -0.20000002}
+  m_LocalScale: {x: 0.7858855, y: 0.7858855, z: 0.7858855}
+  m_Children: []
+  m_Father: {fileID: 5043694211614574641}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
