@@ -5531,6 +5531,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.778698
       objectReference: {fileID: 0}
+    - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: wallCheck

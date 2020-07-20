@@ -25,7 +25,9 @@ public class PlayerMoveController : MonoBehaviour
 	[Range(0, 1f)] public float glideFactor = 0.003f;
 	Animator animator;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
-
+	public float hangTime;
+	public float hangCounter;
+ 
 
 
 	[Header("Wall Jumping")]
@@ -80,6 +82,9 @@ public class PlayerMoveController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+
+    
+
 		if (!playerDead)
 		{
 
@@ -92,6 +97,7 @@ public class PlayerMoveController : MonoBehaviour
 			bool movingRight = input > 0;
 			if (jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))
 				jumpPressed = true;
+		
 
 			animator.SetBool("isMoving", isMoving);
 			if (isMoving)
@@ -215,6 +221,7 @@ public class PlayerMoveController : MonoBehaviour
 			{
 				jumpPressed = false;
 				playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
+				//playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpVelocity);
 				isGrounded = false;
 				ExtraJumpCount--;
 				animator.SetBool("inAir", true);
@@ -225,6 +232,12 @@ public class PlayerMoveController : MonoBehaviour
 				jumpHeld = false;
 				jumpJoyButton.Pressed = false;
 				ExtraJumpCount = ExtraJumpsInAir;
+				hangCounter = hangTime;
+			}
+			 
+			else
+			{
+				hangCounter -= Time.fixedDeltaTime;
 			}
 
 			print(jumpHeld);
@@ -296,7 +309,8 @@ public class PlayerMoveController : MonoBehaviour
 
 	void OnCollisionExit2D(Collision2D other)
 	{
-		//  isGrounded = false;
+		  isGrounded = false;
+		 
 
 	}
 
@@ -341,6 +355,9 @@ public class PlayerMoveController : MonoBehaviour
 
     }
 
-
+	void JumpPressedIsFalse()
+    {
+		jumpPressed = false; 
+    }
 
 }

@@ -21,6 +21,14 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    IEnumerator nextLevel()
+    {
+        Debug.Log("Before Waiting 1 seconds");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +44,13 @@ public class SceneManagement : MonoBehaviour
 
             StartCoroutine(MyMethod());
         }
+
+        if(collision.gameObject.tag == "reachedEnd")
+        {
+            StartCoroutine(nextLevel());
+        }
+
+
     }
 
 

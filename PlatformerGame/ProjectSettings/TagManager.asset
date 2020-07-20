@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - MovingDownPlatform
   - MovingUpPlatform
+  - reachedEnd
   layers:
   - Default
   - TransparentFX
