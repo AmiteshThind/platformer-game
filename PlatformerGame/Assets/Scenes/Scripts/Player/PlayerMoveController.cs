@@ -220,8 +220,8 @@ public class PlayerMoveController : MonoBehaviour
 			if (jumpPressed && isGrounded)
 			{
 				jumpPressed = false;
-				playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
-				//playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpVelocity);
+				//playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
+				playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpVelocity);
 				isGrounded = false;
 				ExtraJumpCount--;
 				animator.SetBool("inAir", true);
@@ -250,7 +250,7 @@ public class PlayerMoveController : MonoBehaviour
 			else
 			{
 				//playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
-				playerRigidBody.gravityScale = 5f;
+				playerRigidBody.gravityScale = 6f;
 			}
 
 			if (isWallSliding)
@@ -309,7 +309,7 @@ public class PlayerMoveController : MonoBehaviour
 
 	void OnCollisionExit2D(Collision2D other)
 	{
-		  isGrounded = false;
+		 // isGrounded = false;
 		 
 
 	}

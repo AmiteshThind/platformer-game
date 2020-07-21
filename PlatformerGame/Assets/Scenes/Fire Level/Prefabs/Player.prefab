@@ -5119,7 +5119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPressed: 0
-  jumpVelocity: 15
+  jumpVelocity: 21
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 1
