@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/OscillatePlatform.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.12/Runtime/Shaders/VectorGradient.shader">
     <Files>
-      <File FileName="Assets/Scenes/Fire Level/Levels/SceneManagement.cs" Line="39" Column="6" />
+      <File FileName="Assets/Scenes/Fire Level/Levels/SceneManagement.cs" Line="32" Column="39" />
       <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" Line="25" Column="1" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="253" Column="5" />
-      <File FileName="Assets/OscillatePlatform.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="312" Column="6" />
+      <File FileName="Assets/OscillatePlatform.cs" Line="12" Column="47" />
+      <File FileName="Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.12/Runtime/Shaders/VectorGradient.shader" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
