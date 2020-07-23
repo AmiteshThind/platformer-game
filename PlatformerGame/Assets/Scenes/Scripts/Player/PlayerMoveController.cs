@@ -27,6 +27,7 @@ public class PlayerMoveController : MonoBehaviour
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 	public float hangTime;
 	public float hangCounter;
+	public bool isOnSlantedWall; 
  
 
 
@@ -212,7 +213,10 @@ public class PlayerMoveController : MonoBehaviour
 			}
 			else
 			{
-				ApplyInput();
+				if (!isOnSlantedWall)
+				{
+					ApplyInput();
+				}
 			}
 
 
@@ -292,7 +296,14 @@ public class PlayerMoveController : MonoBehaviour
 			jumpPressed = false;
 			jumpJoyButton.Pressed = false;
 			animator.SetBool("inAir", false);
+			isOnSlantedWall = false;
 		}
+		if(other.gameObject.tag == "Wall")
+        {
+			isGrounded = false;
+			isOnSlantedWall = true;
+        }
+         
 	}
 
 	void OnCollisionStay2D(Collision2D other)
@@ -309,7 +320,8 @@ public class PlayerMoveController : MonoBehaviour
 
 	void OnCollisionExit2D(Collision2D other)
 	{
-		 // isGrounded = false;
+		// isGrounded = false;
+		isOnSlantedWall = false;
 		 
 
 	}

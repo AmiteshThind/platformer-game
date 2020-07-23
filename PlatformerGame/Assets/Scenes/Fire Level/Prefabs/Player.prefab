@@ -5014,6 +5014,7 @@ GameObject:
   - component: {fileID: 5039589780054138328}
   - component: {fileID: 5039589780054138342}
   - component: {fileID: 5039589780054138341}
+  - component: {fileID: 6251892158148424590}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -5132,6 +5133,7 @@ MonoBehaviour:
   m_MovementSmoothing: 0.3
   hangTime: 0.15
   hangCounter: 0
+  isOnSlantedWall: 0
   isTouchingWall: 0
   wallJumping: 0
   wallCheckPoint: {fileID: 8448422242747726172}
@@ -5175,6 +5177,22 @@ MonoBehaviour:
   isDashingInAir: 0
   DashRechargeTimeCounter: 0
   DashRechargeTime: 0
+--- !u!70 &6251892158148424590
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5040845001323594143}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 73259e7bd24ad43e38d04594b8506333, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.038754147}
+  m_Size: {x: 0.5930176, y: 0.9224917}
+  m_Direction: 0
 --- !u!1 &5041023674563924793
 GameObject:
   m_ObjectHideFlags: 0

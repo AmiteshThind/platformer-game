@@ -6,11 +6,15 @@ public class OscillatePlatform : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float Distance;
-    public float speed;
+    public float DistanceX;
+    public float DistanceY; 
+    public float speedX;
+    public float speedY; 
     private Vector2 startPos;
     PlayerMoveController playerMoveController;
     private bool moving;
+    public bool MoveX;
+    public bool MoveY; 
 
     void Start()
     {
@@ -24,7 +28,14 @@ public class OscillatePlatform : MonoBehaviour
         if (!playerMoveController.playerDead)
         {
             Vector2 v = startPos;
-        v.y += Distance * Mathf.Sin(Time.time * speed);
+            if (MoveY)
+            {
+                v.y += DistanceY * Mathf.Sin(Time.time * speedY);
+            }
+            if (MoveX)
+            {
+                v.x += DistanceX * Mathf.Sin(Time.time * speedX);
+            }
         transform.position = v;
         }
     }
