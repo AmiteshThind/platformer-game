@@ -5,11 +5,13 @@ using UnityEngine;
 public class MovingDownPlatform : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool isActivated = false;
-    public float rateOfDescend = 10f; 
+    public bool isActivated;
+    public float rateOfDescend = 10f;
+   
     Rigidbody2D rb;
     void Start()
     {
+         
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -20,8 +22,10 @@ public class MovingDownPlatform : MonoBehaviour
         
     }
     void FixedUpdate()
+
     {
-        if (isActivated)
+        print("isacitvated" + checkPlatformActivated.MovingPlatformDownActivated);
+        if (checkPlatformActivated.MovingPlatformDownActivated)
         {
             //rb.gravityScale = rateOfDescend/100f;
             rb.velocity = new Vector2(0, -rateOfDescend);
@@ -41,7 +45,7 @@ public class MovingDownPlatform : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
         {
-            isActivated = false; 
+            checkPlatformActivated.MovingPlatformDownActivated = false; 
         }
     }
 }

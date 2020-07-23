@@ -5119,16 +5119,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPressed: 0
-  jumpVelocity: 21
+  jumpVelocity: 30
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 1
-  maxSpeed: 11
+  maxSpeed: 17
   playerIsMoving: 0
   gravity: -9.81
   playerDead: 0
   ExtraJumpsInAir: 0
-  glideFactor: 0.75
+  glideFactor: 0.53
   m_MovementSmoothing: 0.3
   hangTime: 0.15
   hangCounter: 0
@@ -5146,10 +5146,10 @@ MonoBehaviour:
   yWallForce: 13
   walljumpDirection: -1
   isDashing: 0
-  dashSpeed: 50
+  dashSpeed: 150
   maxAirDashes: 3
   maxDashDuration: 0.1
-  dashRechargeTime: 5
+  dashRechargeTime: 3
   maxGroundDashes: 3
   input: 0
 --- !u!114 &5039589780054138341

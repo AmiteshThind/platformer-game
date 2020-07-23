@@ -250,7 +250,7 @@ public class PlayerMoveController : MonoBehaviour
 			else
 			{
 				//playerRigidBody.velocity += Vector2.up * (lowJumpMultiplier);
-				playerRigidBody.gravityScale = 6f;
+				playerRigidBody.gravityScale = 8f;
 			}
 
 			if (isWallSliding)

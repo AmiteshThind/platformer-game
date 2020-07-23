@@ -5,10 +5,11 @@ using UnityEngine;
 public class checkPlatformActivated : MonoBehaviour
 {
     // Start is called before the first frame update
-    MovingDownPlatform movingDownPlatform;
+
+    public static bool MovingPlatformDownActivated = false; 
     void Start()
     {
-        movingDownPlatform = FindObjectOfType<MovingDownPlatform>();
+       // movingDownPlatform = GetComponent<MovingDownPlatform>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,8 @@ public class checkPlatformActivated : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            movingDownPlatform.isActivated = true; 
+            
+            MovingPlatformDownActivated = true; 
         }
     }
 }
