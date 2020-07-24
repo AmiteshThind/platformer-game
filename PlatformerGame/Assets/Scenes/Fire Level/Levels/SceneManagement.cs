@@ -38,7 +38,7 @@ public class SceneManagement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "DeadGround")
+        if(collision.gameObject.tag == "DeadGround" || collision.gameObject.tag == "SlopeRock")
         {
             playerMoveController.playerDead = true; 
 

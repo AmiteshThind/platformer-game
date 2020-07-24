@@ -305,6 +305,8 @@ public class PlayerMoveController : MonoBehaviour
 			isOnSlantedWall = true;
         }
 
+		 
+
 
 
          
