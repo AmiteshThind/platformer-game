@@ -24,7 +24,14 @@ public class PlayerCollectedCheck : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            playerCollectedActivationKey = true; 
+            playerCollectedActivationKey = true;
+            Destroy(GetComponent<SpriteRenderer>());
+            Destroy(GetComponent<BoxCollider2D>());
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
+            }
+
         }
     }
 
