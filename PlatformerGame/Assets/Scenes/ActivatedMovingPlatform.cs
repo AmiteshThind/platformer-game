@@ -60,7 +60,7 @@ public class ActivatedMovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-             collision.collider.transform.SetParent(transform);
+             // collision.collider.transform.SetParent(transform);
             
 
             movePlatform = true; 
@@ -73,7 +73,7 @@ public class ActivatedMovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.collider.transform.SetParent(null);
+           // collision.collider.transform.SetParent(null);
             movePlatform = false; 
         }
     }

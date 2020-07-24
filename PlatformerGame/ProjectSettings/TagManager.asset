@@ -12,6 +12,7 @@ TagManager:
   - MovingDownPlatform
   - MovingUpPlatform
   - reachedEnd
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
