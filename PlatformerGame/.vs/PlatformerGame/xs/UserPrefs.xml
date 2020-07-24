@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scripts/Player/PlayerMoveController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerCollectedCheck.cs">
     <Files>
       <File FileName="Assets/Scenes/Fire Level/Levels/SceneManagement.cs" Line="42" Column="10" />
       <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" Line="25" Column="1" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="223" Column="7" />
-      <File FileName="Assets/OscillatePlatform.cs" Line="27" Column="12" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="324" Column="27" />
+      <File FileName="Assets/OscillatePlatform.cs" Line="37" Column="64" />
       <File FileName="Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.12/Runtime/Shaders/VectorGradient.shader" Line="1" Column="1" />
       <File FileName="Assets/checkPlatformActivated.cs" Line="9" Column="19" />
-      <File FileName="Assets/Scenes/Fire Level/Levels/MovingDownPlatform.cs" Line="14" Column="10" />
+      <File FileName="Assets/Scenes/Fire Level/Levels/MovingDownPlatform.cs" Line="15" Column="15" />
+      <File FileName="Assets/Scenes/ActivatedMovingPlatform.cs" Line="1" Column="1" />
+      <File FileName="Assets/PlayerCollectedCheck.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
