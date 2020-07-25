@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,11 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
     // Start is called before the first frame update
 
     public PressureSwitch [] pressureSwitches;
-    
+	public GameObject unlockPivot;
+	public GameObject door;
+    public float unlockTime = 3f;
+	private bool unlocked = false;
+	private bool unlocking = false;
 
     void Start()
     {
@@ -17,22 +22,41 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PuzzleCompleted())
+        if (PuzzleCompleted() && !unlocked && !unlocking)
         {
-            print("everything is great");
+			Unlock();
         }
     }
 
+	private void Unlock()
+	{
+		unlocking = true;
+	}
 
-    bool PuzzleCompleted()
+	private void FixedUpdate()
+	{
+		if (unlocking)
+		{
+			OpenDoor();
+		}	
+	}
+
+	private void OpenDoor()
+	{
+		door.transform.RotateAround(unlockPivot.transform.position, Vector3.back, 20 * Time.deltaTime);
+		if (door.transform.rotation.z <= 0) // stop when platform is flat
+		{
+			unlocked = true;
+			unlocking = false;
+		}
+	}
+
+	bool PuzzleCompleted()
     {
         bool allSwitchesActivated = true; 
         foreach (var pressureSwitch in pressureSwitches)
         {
-            if(pressureSwitch.activated == false)
-            {
-                allSwitchesActivated = false;
-            }
+            allSwitchesActivated &= pressureSwitch.activated;
         }
 
         return allSwitchesActivated;
