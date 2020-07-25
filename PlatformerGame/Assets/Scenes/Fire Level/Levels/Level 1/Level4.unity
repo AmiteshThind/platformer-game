@@ -2437,7 +2437,7 @@ PrefabInstance:
     - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
       propertyPath: m_Name
-      value: jumpplatform (10)
+      value: PuzzleUnlockable
       objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
@@ -6254,6 +6254,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1130746067}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &675249560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+    type: 3}
+  m_PrefabInstance: {fileID: 188194783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &675249561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675249560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f4ccafe635048b5af60187ebb17304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressureSwitches:
+  - {fileID: 2013391095}
+  - {fileID: 1736376357}
+  - {fileID: 2004220027}
 --- !u!1 &698495181
 GameObject:
   m_ObjectHideFlags: 0
@@ -13366,7 +13388,7 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 753.2267
+      value: 753.3921
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -14399,6 +14421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f310736d0f04e40b40fb8e1822e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activated: 0
   activateTag: OpenSesameCircleRock
 --- !u!212 &1736376358
 SpriteRenderer:
@@ -17450,6 +17473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f310736d0f04e40b40fb8e1822e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activated: 0
   activateTag: OpenSesameSquareRock
 --- !u!212 &2004220028
 SpriteRenderer:
@@ -17884,6 +17908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f310736d0f04e40b40fb8e1822e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activated: 0
   activateTag: OpenSesameTriangleRock
 --- !u!4 &2026900896 stripped
 Transform:
