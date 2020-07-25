@@ -8,7 +8,7 @@ public class PressureSwitch : MonoBehaviour
 	Animator animator;
 	private bool pressed;
 	private int pressCount;
-	private bool activated = false;
+	public bool activated = false;
 	public string activateTag;
 
 	// Start is called before the first frame update
@@ -20,7 +20,7 @@ public class PressureSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		print(NewPlatformActivated());
+		 
     }
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -58,8 +58,5 @@ public class PressureSwitch : MonoBehaviour
 		return activated;
 	}
 
-	public bool NewPlatformActivated()
-	{
-		return pressCount == 3;
-	}
+ 
 }
