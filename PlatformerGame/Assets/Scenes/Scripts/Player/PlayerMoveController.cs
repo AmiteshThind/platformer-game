@@ -245,7 +245,7 @@ public class PlayerMoveController : MonoBehaviour
 				hangCounter -= Time.fixedDeltaTime;
 			}
 
-			print(jumpHeld);
+			
 			if (playerRigidBody.velocity.y <= 0 && jumpHeld)
 			{
 
@@ -315,7 +315,7 @@ public class PlayerMoveController : MonoBehaviour
 	void OnCollisionStay2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Ground" && isGrounded == true)
-		{
+		{ 
 			airDashCount = 0;
 			jumpPressed = false;
 			jumpJoyButton.Pressed = false;

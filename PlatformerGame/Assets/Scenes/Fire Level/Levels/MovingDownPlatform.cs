@@ -24,7 +24,6 @@ public class MovingDownPlatform : MonoBehaviour
     void FixedUpdate()
 
     {
-        print("isacitvated" + checkPlatformActivated.MovingPlatformDownActivated);
         if (checkPlatformActivated.MovingPlatformDownActivated)
         {
             //rb.gravityScale = rateOfDescend/100f;
