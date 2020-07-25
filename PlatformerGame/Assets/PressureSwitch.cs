@@ -20,7 +20,7 @@ public class PressureSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+		print(NewPlatformActivated());
     }
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -56,5 +56,10 @@ public class PressureSwitch : MonoBehaviour
 	public bool IsActivated()
 	{
 		return activated;
+	}
+
+	public bool NewPlatformActivated()
+	{
+		return pressCount == 3;
 	}
 }
