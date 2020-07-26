@@ -8,6 +8,7 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
     // Start is called before the first frame update
 
     public PressureSwitch [] pressureSwitches;
+	public Dissolve[] dissolves; // TODO: Change class name if more behaviour is required from the rocks, 
 	public GameObject unlockPivot;
 	public GameObject door;
     public float unlockTime = 3f;
@@ -30,6 +31,11 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 
 	private void Unlock()
 	{
+		// test for dissolve
+		foreach(var dissolve in dissolves)
+		{
+			dissolve.InitiateDissolve();
+		}
 		unlocking = true;
 	}
 
