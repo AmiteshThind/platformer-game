@@ -1474,6 +1474,7 @@ GameObject:
   - component: {fileID: 99710946}
   - component: {fileID: 99710945}
   - component: {fileID: 99710948}
+  - component: {fileID: 99710949}
   m_Layer: 0
   m_Name: OpenSesameRock1
   m_TagString: OpenSesameTriangleRock
@@ -1520,7 +1521,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 6d775966dcaccb24080fc1c0acac3285, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1592,6 +1593,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8623781, y: 2.0490477}
   m_EdgeRadius: 0
+--- !u!114 &99710949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99710944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e953b494d2c4d9c4499bce0a12b5a0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &124700479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4511,10 @@ MonoBehaviour:
   - {fileID: 2013391095}
   - {fileID: 1736376357}
   - {fileID: 2004220027}
+  dissolves:
+  - {fileID: 99710949}
+  - {fileID: 1106344452}
+  - {fileID: 1399479874}
   unlockPivot: {fileID: 383147649}
   door: {fileID: 675249560}
   unlockTime: 3
@@ -9574,6 +9591,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1000797728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000797730}
+  - component: {fileID: 1000797729}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1000797729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000797728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: e58d95b72e683cc4a80f8c3716b48fec, type: 2}
+--- !u!4 &1000797730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000797728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 813.2625, y: 143.59468, z: 50.05091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1004887999
 GameObject:
   m_ObjectHideFlags: 0
@@ -10060,6 +10125,7 @@ GameObject:
   - component: {fileID: 1106344449}
   - component: {fileID: 1106344448}
   - component: {fileID: 1106344451}
+  - component: {fileID: 1106344452}
   m_Layer: 0
   m_Name: OpenSesameRock2
   m_TagString: OpenSesameSquareRock
@@ -10106,7 +10172,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 6d775966dcaccb24080fc1c0acac3285, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10178,6 +10244,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8178957, y: 2.0697875}
   m_EdgeRadius: 0
+--- !u!114 &1106344452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106344447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e953b494d2c4d9c4499bce0a12b5a0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1106784984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2058049444802620448, guid: d11af604d66f94983939358ef0022f48,
@@ -11786,6 +11864,7 @@ GameObject:
   - component: {fileID: 1399479871}
   - component: {fileID: 1399479870}
   - component: {fileID: 1399479873}
+  - component: {fileID: 1399479874}
   m_Layer: 0
   m_Name: OpenSesameRock3
   m_TagString: OpenSesameCircleRock
@@ -11832,7 +11911,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 6d775966dcaccb24080fc1c0acac3285, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11904,6 +11983,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.86875, y: 2.1052976}
   m_EdgeRadius: 0
+--- !u!114 &1399479874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399479869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e953b494d2c4d9c4499bce0a12b5a0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1406492429
 GameObject:
   m_ObjectHideFlags: 0
@@ -13314,12 +13405,12 @@ PrefabInstance:
     - target: {fileID: 5708351171949996048, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.14125
+      value: 780.2
       objectReference: {fileID: 0}
     - target: {fileID: 5708351171949996048, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6712418
+      value: 103.2
       objectReference: {fileID: 0}
     - target: {fileID: 5708351171949996048, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -13454,12 +13545,12 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 108.318756
+      value: 106.068756
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 826.08795
+      value: 760.2897
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -13479,6 +13570,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1596408564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1596408566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596408565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1612768994
 GameObject:
   m_ObjectHideFlags: 0
