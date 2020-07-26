@@ -1475,6 +1475,7 @@ GameObject:
   - component: {fileID: 99710945}
   - component: {fileID: 99710948}
   - component: {fileID: 99710949}
+  - component: {fileID: 99710950}
   m_Layer: 0
   m_Name: OpenSesameRock1
   m_TagString: OpenSesameTriangleRock
@@ -1605,6 +1606,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e953b494d2c4d9c4499bce0a12b5a0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &99710950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99710944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b581b2b55c2ed41a2a81101e0d42b4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginalRockLocation: {fileID: 1620457361}
 --- !u!1 &124700479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4518,6 +4532,8 @@ MonoBehaviour:
   unlockPivot: {fileID: 383147649}
   door: {fileID: 675249560}
   unlockTime: 3
+  misplacedRock: 0
+  resetPuzzle: 0
 --- !u!1 &474909699
 GameObject:
   m_ObjectHideFlags: 0
@@ -10126,6 +10142,7 @@ GameObject:
   - component: {fileID: 1106344448}
   - component: {fileID: 1106344451}
   - component: {fileID: 1106344452}
+  - component: {fileID: 1106344453}
   m_Layer: 0
   m_Name: OpenSesameRock2
   m_TagString: OpenSesameSquareRock
@@ -10256,6 +10273,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e953b494d2c4d9c4499bce0a12b5a0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1106344453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106344447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b581b2b55c2ed41a2a81101e0d42b4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginalRockLocation: {fileID: 1380655564}
 --- !u!4 &1106784984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2058049444802620448, guid: d11af604d66f94983939358ef0022f48,
@@ -11682,6 +11712,36 @@ Transform:
   m_Father: {fileID: 27502961}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1380655563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380655564}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380655564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380655563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 824.6, y: 140.3, z: -302.46857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1395165978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2058049444802620448, guid: d11af604d66f94983939358ef0022f48,
@@ -11865,6 +11925,7 @@ GameObject:
   - component: {fileID: 1399479870}
   - component: {fileID: 1399479873}
   - component: {fileID: 1399479874}
+  - component: {fileID: 1399479875}
   m_Layer: 0
   m_Name: OpenSesameRock3
   m_TagString: OpenSesameCircleRock
@@ -11995,6 +12056,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e953b494d2c4d9c4499bce0a12b5a0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1399479875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399479869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b581b2b55c2ed41a2a81101e0d42b4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginalRockLocation: {fileID: 2033122723}
 --- !u!1 &1406492429
 GameObject:
   m_ObjectHideFlags: 0
@@ -13550,7 +13624,7 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 760.2897
+      value: 759.3021
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -13682,6 +13756,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1620457360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1620457361}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1620457361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620457360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 809.1, y: 140.3, z: -302.46857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624452013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
@@ -14616,6 +14720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   activateTag: OpenSesameCircleRock
+  wrongRock: 0
+  objectOnPlatform: 0
 --- !u!212 &1736376358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17668,6 +17774,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   activateTag: OpenSesameSquareRock
+  wrongRock: 0
+  objectOnPlatform: 0
 --- !u!212 &2004220028
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18103,12 +18211,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   activateTag: OpenSesameTriangleRock
+  wrongRock: 0
+  objectOnPlatform: 0
 --- !u!4 &2026900896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1875461658307131694, guid: 44a66454aad5a465dbb8b4048b385ffb,
     type: 3}
   m_PrefabInstance: {fileID: 1426920835}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2033122722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033122723}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2033122723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033122722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 816.7, y: 140.4, z: -302.46857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118234344
 GameObject:
   m_ObjectHideFlags: 0
