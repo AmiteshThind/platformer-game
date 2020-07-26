@@ -8,28 +8,46 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
     // Start is called before the first frame update
 
     public PressureSwitch [] pressureSwitches;
+	public Dissolve[] dissolves; // TODO: Change class name if more behaviour is required from the rocks, 
 	public GameObject unlockPivot;
 	public GameObject door;
+
     public float unlockTime = 3f;
 	private bool unlocked = false;
 	private bool unlocking = false;
+	public bool misplacedRock;
+	public bool resetPuzzle = false;
 
-    void Start()
+	void Start()
     {
         
     }
 
     // Update is called once per frame
     void Update()
+
     {
-        if (PuzzleCompleted() && !unlocked && !unlocking)
+
+		PuzzleCheck();
+
+		print(PuzzleCompleted());
+
+
+        if (PuzzleCompleted() && !unlocked && !unlocking )
         {
+			print("reached");
 			Unlock();
         }
+		
     }
 
 	private void Unlock()
 	{
+		// test for dissolve
+		foreach(var dissolve in dissolves)
+		{
+			dissolve.InitiateDissolve();
+		}
 		unlocking = true;
 	}
 
@@ -51,15 +69,53 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 		}
 	}
 
-	bool PuzzleCompleted()
+	public bool PuzzleCompleted()
     {
-        bool allSwitchesActivated = true; 
-        foreach (var pressureSwitch in pressureSwitches)
-        {
-            allSwitchesActivated &= pressureSwitch.activated;
-        }
+		bool allSwitchesActivated = true;
+
+					 
+			foreach (var pressureSwitch in pressureSwitches)
+			{
+				allSwitchesActivated &= pressureSwitch.activated;
+			}
+ 
 
         return allSwitchesActivated;
+    }
+
+	 void PuzzleCheck()
+    {
+		 
+		foreach (var pressureSwitch in pressureSwitches)
+		{
+			misplacedRock |= pressureSwitch.wrongRock;
+		}
+
+		if (misplacedRock && rocksOnAllPlatforms())
+		{
+			 
+			misplacedRock = false;
+			foreach (var pressureSwitch in pressureSwitches)
+			{
+				pressureSwitch.objectOnPlatform = false;
+				pressureSwitch.wrongRock = false;
+				pressureSwitch.activated = false;
+			}
+
+			 
+		}
+
+
+	}
+
+	public  bool rocksOnAllPlatforms()
+    {
+		bool rocksOnAllPlatforms = true;
+		foreach(var pressureSwitch in pressureSwitches)
+        {
+			rocksOnAllPlatforms &= pressureSwitch.objectOnPlatform;
+        }
+		return rocksOnAllPlatforms;
     }
 
 

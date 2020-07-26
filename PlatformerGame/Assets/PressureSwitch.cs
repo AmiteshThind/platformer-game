@@ -6,10 +6,13 @@ using UnityEngine;
 public class PressureSwitch : MonoBehaviour
 {
 	Animator animator;
+	 
 	private bool pressed;
 	private int pressCount;
 	public bool activated = false;
 	public string activateTag;
+	public bool wrongRock;
+	public bool objectOnPlatform = false;
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,11 +32,17 @@ public class PressureSwitch : MonoBehaviour
 		{
 			if (other.gameObject.tag == activateTag)
 				activated = true;
-			pressCount++;
+				pressCount++;
 			if (!pressed)
 			{
 				animator.SetBool("Press", true);
 			}
+			if(other.gameObject.tag!=activateTag && other.gameObject.tag != "Player"){
+				wrongRock = true; 
+            }
+			if(other.gameObject.tag!="Ground" && other.gameObject.tag != "Player"){
+			 objectOnPlatform = true;
+}
 		}
 		
 	}
@@ -50,13 +59,19 @@ public class PressureSwitch : MonoBehaviour
 				animator.SetBool("Press", false);
 			}
 			pressCount--;
+
+			//wrongRock = false;
+		objectOnPlatform = false;
 		}
-		
+		 
+
 	}
 	public bool IsActivated()
 	{
 		return activated;
 	}
+
+ 
 
  
 }
