@@ -11,7 +11,6 @@ public class PressureSwitch : MonoBehaviour
 	private int pressCount;
 	public bool activated = false;
 	public string activateTag;
-	public bool wrongRock;
 	public bool objectOnPlatform = false;
 
 	// Start is called before the first frame update
@@ -37,12 +36,10 @@ public class PressureSwitch : MonoBehaviour
 			{
 				animator.SetBool("Press", true);
 			}
-			if(other.gameObject.tag!=activateTag && other.gameObject.tag != "Player"){
-				wrongRock = true; 
-            }
-			if(other.gameObject.tag!="Ground" && other.gameObject.tag != "Player"){
+			
+			if(other.gameObject.tag != "Player"){
 			 objectOnPlatform = true;
-}
+			}
 		}
 		
 	}
@@ -56,10 +53,7 @@ public class PressureSwitch : MonoBehaviour
 				activated = true;
 	 
 			 
-			if (other.gameObject.tag != activateTag && other.gameObject.tag != "Player")
-			{
-				wrongRock = true;
-			}
+			
 			if (other.gameObject.tag != "Ground" && other.gameObject.tag != "Player")
 			{
 				objectOnPlatform = true;
@@ -81,8 +75,7 @@ public class PressureSwitch : MonoBehaviour
 			}
 			pressCount--;
 
-	    wrongRock = false;
-		objectOnPlatform = false;
+	  	objectOnPlatform = false;
 		}
 		 
 

@@ -1589,7 +1589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99710944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 805.78, y: 136.12, z: 0}
+  m_LocalPosition: {x: 805.12, y: 135.94, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4634,7 +4634,6 @@ MonoBehaviour:
   - {fileID: 1106344447}
   - {fileID: 1399479869}
   unlockTime: 3
-  misplacedRock: 0
   resetPuzzle: 0
 --- !u!1 &474909699
 GameObject:
@@ -10418,7 +10417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106344447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 820.73, y: 136.04, z: 0}
+  m_LocalPosition: {x: 821.13, y: 136.07, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12222,7 +12221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399479869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 813.16, y: 136.02, z: 0}
+  m_LocalPosition: {x: 813.08, y: 136.06, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14934,7 +14933,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   activateTag: OpenSesameCircleRock
-  wrongRock: 0
   objectOnPlatform: 0
 --- !u!212 &1736376358
 SpriteRenderer:
@@ -18026,7 +18024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   activateTag: OpenSesameSquareRock
-  wrongRock: 0
   objectOnPlatform: 0
 --- !u!212 &2004220028
 SpriteRenderer:
@@ -18478,7 +18475,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   activateTag: OpenSesameTriangleRock
-  wrongRock: 0
   objectOnPlatform: 0
 --- !u!4 &2026900896 stripped
 Transform:

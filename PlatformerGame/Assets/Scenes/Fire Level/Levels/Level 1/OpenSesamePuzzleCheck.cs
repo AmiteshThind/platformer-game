@@ -12,24 +12,24 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 	public GameObject unlockPivot;
 	public GameObject door;
 	public GameObject[] rocks;
-	Vector3[] rocksOriginalLocation;
-
-    public float unlockTime = 3f;
+	Vector3[] rocksOriginalPosition;
+	Quaternion [] rocksOriginalRotation;
+	public float unlockTime = 3f;
 	private bool unlocked = false;
 	private bool unlocking = false;
-	public bool misplacedRock;
 	public bool resetPuzzle = false;
 
 	void Start()
     {
-		rocksOriginalLocation = new Vector3[rocks.Length];
-       for(int i = 0; i < rocks.Length; i++)
+		rocksOriginalPosition = new Vector3[rocks.Length];
+		rocksOriginalRotation = new Quaternion[rocks.Length];
+
+	   for (int i = 0; i < rocks.Length; i++)
         {
-			
-			rocksOriginalLocation[i] = rocks[i].transform.position;
+			rocksOriginalPosition[i] = rocks[i].transform.position;
+			rocksOriginalRotation[i] = rocks[i].transform.rotation;
 		}
-		print(rocksOriginalLocation);
-		print(rocks);
+ 
     }
 
     // Update is called once per frame
@@ -37,26 +37,22 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 
     {
 
-		//PuzzleCheck();
-
 		if (!PuzzleCompleted() && rocksOnAllPlatforms())
 		{
 			resetRocks();
-			//misplacedRock = false;
+
 			foreach (var pressureSwitch in pressureSwitches)
 			{
 				pressureSwitch.objectOnPlatform = false;
-				//pressureSwitch.wrongRock = false;
 				pressureSwitch.activated = false;
 			}
-
 
 		}
 
 
 		else if (PuzzleCompleted() && !unlocked && !unlocking )
         {
-			 
+			
 			Unlock();
         }
 		
@@ -79,6 +75,7 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 			OpenDoor();
 		}	
 	}
+
 
 	private void OpenDoor()
 	{
@@ -104,36 +101,10 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
         return allSwitchesActivated;
     }
 
-	 void PuzzleCheck()
-    {
-		 
-		foreach (var pressureSwitch in pressureSwitches)
-		{
-			if (pressureSwitch.wrongRock)
-			{
-				misplacedRock  = true;
-			}
-		}
-
-		if (!PuzzleCompleted() && rocksOnAllPlatforms())
-		{
-			resetRocks();  
-			//misplacedRock = false;
-			foreach (var pressureSwitch in pressureSwitches)
-			{
-				pressureSwitch.objectOnPlatform = false;
-				pressureSwitch.wrongRock = false;
-				pressureSwitch.activated = false;
-			}
-			
-			 
-		}
-
-
-	}
 
 	public  bool rocksOnAllPlatforms()
-    {
+
+	{
 		bool rocksOnAllPlatforms = true;
 		foreach(var pressureSwitch in pressureSwitches)
         {
@@ -142,13 +113,13 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 		return rocksOnAllPlatforms;
     }
 
+
 	void resetRocks()
     {
 		for(int i =0; i < rocks.Length; i++)
         {
-			print("NEW"+rocks[i].transform.position);
-			print("ORIGNIAL"+rocksOriginalLocation[i]); 
-			rocks[i].transform.position = rocksOriginalLocation[i];
+			rocks[i].transform.position = rocksOriginalPosition[i];
+			rocks[i].transform.rotation = rocksOriginalRotation[i];
         }
     }
 
