@@ -60,7 +60,7 @@ public class PressureSwitch : MonoBehaviour
 			}
 			pressCount--;
 
-			//wrongRock = false;
+	    wrongRock = false;
 		objectOnPlatform = false;
 		}
 		 

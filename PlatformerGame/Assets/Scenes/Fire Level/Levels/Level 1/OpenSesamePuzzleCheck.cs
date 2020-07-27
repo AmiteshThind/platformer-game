@@ -77,7 +77,7 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 			foreach (var pressureSwitch in pressureSwitches)
 			{
 				allSwitchesActivated &= pressureSwitch.activated;
-			}
+			}  
  
 
         return allSwitchesActivated;
@@ -88,7 +88,10 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 		 
 		foreach (var pressureSwitch in pressureSwitches)
 		{
-			misplacedRock |= pressureSwitch.wrongRock;
+			if (pressureSwitch.wrongRock)
+			{
+				misplacedRock  = true;
+			}
 		}
 
 		if (misplacedRock && rocksOnAllPlatforms())
@@ -101,7 +104,7 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 				pressureSwitch.wrongRock = false;
 				pressureSwitch.activated = false;
 			}
-
+			
 			 
 		}
 
