@@ -47,7 +47,28 @@ public class PressureSwitch : MonoBehaviour
 		
 	}
 
-	
+
+	private void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.gameObject.tag != "Ground")
+		{
+			if (other.gameObject.tag == activateTag)
+				activated = true;
+	 
+			 
+			if (other.gameObject.tag != activateTag && other.gameObject.tag != "Player")
+			{
+				wrongRock = true;
+			}
+			if (other.gameObject.tag != "Ground" && other.gameObject.tag != "Player")
+			{
+				objectOnPlatform = true;
+			}
+		}
+
+	}
+
+
 	private void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.gameObject.tag != "Ground")

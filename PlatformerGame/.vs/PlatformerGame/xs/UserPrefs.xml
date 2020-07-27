@@ -1,30 +1,13 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RocksReset.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Fire Level/Levels/Level 1/OpenSesamePuzzleCheck.cs">
     <Files>
-      <File FileName="Assets/Scenes/RockTrigger.cs" Line="28" Column="9" IsPinned="True" />
-      <File FileName="Assets/Scenes/Fire Level/Levels/SceneManagement.cs" Line="41" Column="95" />
-      <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" Line="25" Column="1" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="308" Column="4" />
-      <File FileName="Assets/OscillatePlatform.cs" Line="8" Column="1" />
-      <File FileName="Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.12/Runtime/Shaders/VectorGradient.shader" Line="1" Column="1" />
-      <File FileName="Assets/checkPlatformActivated.cs" Line="9" Column="19" />
-      <File FileName="Assets/Scenes/Fire Level/Levels/MovingDownPlatform.cs" Line="15" Column="15" />
-      <File FileName="Assets/PlayerCollectedCheck.cs" Line="32" Column="17" />
-      <File FileName="Assets/Scenes/Fire Level/Levels/Level 1/OpenSesamePuzzleCheck.cs" Line="18" Column="41" />
-      <File FileName="Assets/PressureSwitch.cs" Line="28" Column="1" />
-      <File FileName="Assets/RocksReset.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Fire Level/Levels/Level 1/OpenSesamePuzzleCheck.cs" Line="133" Column="1" />
+      <File FileName="Assets/PressureSwitch.cs" Line="63" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="PlatformerGame" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8dac51f9-077b-4bb9-ada5-984bfaedfd92" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="21f108dd-6421-4b12-90ad-71bc0ba4c3b3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

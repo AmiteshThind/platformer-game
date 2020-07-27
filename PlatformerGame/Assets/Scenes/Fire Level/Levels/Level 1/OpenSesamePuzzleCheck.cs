@@ -11,6 +11,8 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 	public Dissolve[] dissolves; // TODO: Change class name if more behaviour is required from the rocks, 
 	public GameObject unlockPivot;
 	public GameObject door;
+	public GameObject[] rocks;
+	Vector3[] rocksOriginalLocation;
 
     public float unlockTime = 3f;
 	private bool unlocked = false;
@@ -20,7 +22,14 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 
 	void Start()
     {
-        
+		rocksOriginalLocation = new Vector3[rocks.Length];
+       for(int i = 0; i < rocks.Length; i++)
+        {
+			
+			rocksOriginalLocation[i] = rocks[i].transform.position;
+		}
+		print(rocksOriginalLocation);
+		print(rocks);
     }
 
     // Update is called once per frame
@@ -28,14 +37,26 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 
     {
 
-		PuzzleCheck();
+		//PuzzleCheck();
 
-		print(PuzzleCompleted());
+		if (!PuzzleCompleted() && rocksOnAllPlatforms())
+		{
+			resetRocks();
+			//misplacedRock = false;
+			foreach (var pressureSwitch in pressureSwitches)
+			{
+				pressureSwitch.objectOnPlatform = false;
+				//pressureSwitch.wrongRock = false;
+				pressureSwitch.activated = false;
+			}
 
 
-        if (PuzzleCompleted() && !unlocked && !unlocking )
+		}
+
+
+		else if (PuzzleCompleted() && !unlocked && !unlocking )
         {
-			print("reached");
+			 
 			Unlock();
         }
 		
@@ -94,10 +115,10 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 			}
 		}
 
-		if (misplacedRock && rocksOnAllPlatforms())
+		if (!PuzzleCompleted() && rocksOnAllPlatforms())
 		{
-			 
-			misplacedRock = false;
+			resetRocks();  
+			//misplacedRock = false;
 			foreach (var pressureSwitch in pressureSwitches)
 			{
 				pressureSwitch.objectOnPlatform = false;
@@ -121,5 +142,14 @@ public class OpenSesamePuzzleCheck : MonoBehaviour
 		return rocksOnAllPlatforms;
     }
 
+	void resetRocks()
+    {
+		for(int i =0; i < rocks.Length; i++)
+        {
+			print("NEW"+rocks[i].transform.position);
+			print("ORIGNIAL"+rocksOriginalLocation[i]); 
+			rocks[i].transform.position = rocksOriginalLocation[i];
+        }
+    }
 
 }
