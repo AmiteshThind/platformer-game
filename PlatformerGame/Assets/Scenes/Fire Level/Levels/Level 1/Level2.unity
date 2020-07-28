@@ -19874,83 +19874,12 @@ Transform:
   m_Father: {fileID: 653440788}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &602887195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 602887196}
-  - component: {fileID: 602887197}
-  m_Layer: 0
-  m_Name: LowerDeathBoundary
-  m_TagString: DeadGround
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &602887196
+--- !u!4 &602887196 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8092376463800593370}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602887195}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 440.34576, y: -38.596367, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 839627246}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &602887197
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602887195}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -742.2041, y: 93.279945}
-  - {x: -470.6082, y: 96.330086}
-  - {x: -465.55377, y: 53.587402}
-  - {x: -424.15735, y: 53.55262}
-  - {x: -360.9094, y: 32.328026}
-  - {x: -218.70145, y: 45.836258}
-  - {x: -191.5444, y: 46.382607}
-  - {x: -184.95227, y: 65.18004}
-  - {x: -159.28424, y: 63.78662}
-  - {x: -149.17188, y: 65.74371}
-  - {x: -143.73404, y: 76.125694}
-  - {x: -111.34772, y: 79.33657}
-  - {x: -106.116486, y: 80.44095}
-  - {x: -82.05197, y: 84.883545}
-  - {x: -73.581085, y: 84.98698}
-  - {x: -52.8183, y: 83.13566}
-  - {x: -14.909973, y: 87.922424}
-  - {x: 11.820374, y: 92.33848}
-  - {x: 70.63544, y: 99.54387}
-  - {x: 112.64032, y: 97.08535}
-  - {x: 155.30164, y: 95.40329}
-  - {x: 186.18365, y: 99.03616}
-  - {x: 225.93878, y: 109.438736}
-  - {x: 236.13397, y: 116.50779}
-  - {x: 264.1313, y: 115.9225}
-  - {x: 306.40118, y: 119.149864}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &608776519
 GameObject:
   m_ObjectHideFlags: 0
@@ -23391,8 +23320,8 @@ Transform:
   - {fileID: 720867071}
   - {fileID: 2076619486}
   - {fileID: 28502237}
-  - {fileID: 1784861368}
   - {fileID: 602887196}
+  - {fileID: 1784861368}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48400,7 +48329,7 @@ GameObject:
   - component: {fileID: 1784861368}
   - component: {fileID: 1784861369}
   m_Layer: 0
-  m_Name: UpperDeathBoundary
+  m_Name: DeathBoundary
   m_TagString: DeadGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48418,7 +48347,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 839627246}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1784861369
 EdgeCollider2D:
@@ -66263,6 +66192,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8092376463800593370
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 839627246}
+    m_Modifications:
+    - target: {fileID: 8092376464353116097, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_Name
+      value: DeathBoundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 440.34576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -38.596367
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092376464353116102, guid: bbb8e1644c9a14261a73228c8794590a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbb8e1644c9a14261a73228c8794590a, type: 3}
 --- !u!60 &8267580512058523652
 PolygonCollider2D:
   m_ObjectHideFlags: 0
