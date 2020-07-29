@@ -224,8 +224,8 @@ public class PlayerMoveController : MonoBehaviour
 			if (jumpPressed && isGrounded)
 			{
 				jumpPressed = false;
-				playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
-				//playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpVelocity);
+				//playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
+				playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpVelocity);
 				isGrounded = false;
 				ExtraJumpCount--;
 				animator.SetBool("inAir", true);
@@ -305,11 +305,18 @@ public class PlayerMoveController : MonoBehaviour
 			isOnSlantedWall = true;
         }
 
-		 
+
+		if (other.gameObject.tag == "MovingPlatform")
+		{
+			 
+			isGrounded = true;
+			jumpPressed = false;
+			jumpJoyButton.Pressed = false;
+			animator.SetBool("inAir", false);
+		}
 
 
 
-         
 	}
 
 	void OnCollisionStay2D(Collision2D other)
@@ -328,6 +335,8 @@ public class PlayerMoveController : MonoBehaviour
         {
 			transform.parent = other.transform;
 			isGrounded = true;
+			jumpPressed = false;
+			jumpJoyButton.Pressed = false;
 			animator.SetBool("inAir", false);
 		}
          
