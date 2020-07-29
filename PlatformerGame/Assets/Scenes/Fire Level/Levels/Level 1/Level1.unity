@@ -9526,7 +9526,7 @@ GameObject:
   - component: {fileID: 308187913}
   - component: {fileID: 308187912}
   - component: {fileID: 308187911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jumpplatform (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -11284,7 +11284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 385963182}
   - component: {fileID: 385963181}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalLongPlatform (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -20162,7 +20162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557595543}
   - component: {fileID: 557595542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalLongPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -21086,13 +21086,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
-      propertyPath: maxSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: glideFactor
-      value: 0.7
+      propertyPath: groundLayer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 5039589780679017494, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
@@ -31745,7 +31740,7 @@ GameObject:
   - component: {fileID: 1079677993}
   - component: {fileID: 1079677992}
   - component: {fileID: 1079677991}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -34590,7 +34585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217951449}
   - component: {fileID: 1217951448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalLongPlatform (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -44083,7 +44078,7 @@ GameObject:
   - component: {fileID: 1455517402}
   - component: {fileID: 1455517404}
   - component: {fileID: 1455517403}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Template (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -44666,7 +44661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471587108}
   - component: {fileID: 1471587109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -51398,7 +51393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1546157937}
   - component: {fileID: 1546157938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -52964,7 +52959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616408288}
   - component: {fileID: 1616408289}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -59003,7 +58998,7 @@ GameObject:
   - component: {fileID: 1837496137}
   - component: {fileID: 1837496136}
   - component: {fileID: 1837496135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jumpplatform (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -59742,7 +59737,7 @@ GameObject:
   - component: {fileID: 1868100877}
   - component: {fileID: 1868100876}
   - component: {fileID: 1868100875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jumpplatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -62849,7 +62844,7 @@ GameObject:
   - component: {fileID: 1976524054}
   - component: {fileID: 1976524053}
   - component: {fileID: 1976524052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jumpplatform (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -63711,7 +63706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2036038920}
   - component: {fileID: 2036038921}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -72427,6 +72422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1629677655349642805, guid: a70c19e0663bf4105963bf218c00ae08,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a70c19e0663bf4105963bf218c00ae08, type: 3}
 --- !u!1001 &1875461660168547823
@@ -72591,6 +72591,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5291143249655201201, guid: 48a95c314ef5e459bae6483db3160b34,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5291143249655201206, guid: 48a95c314ef5e459bae6483db3160b34,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72679,6 +72684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameObject (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574347456876067593, guid: face869d459204abcaa5dbfd619d9db6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5574347456876067598, guid: face869d459204abcaa5dbfd619d9db6,
         type: 3}
@@ -72813,6 +72823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameObject (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267580513746059774, guid: 1878de257ba834ce2b92f1e1b8f91020,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1878de257ba834ce2b92f1e1b8f91020, type: 3}

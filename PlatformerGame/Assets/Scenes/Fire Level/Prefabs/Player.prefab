@@ -5100,6 +5100,7 @@ Transform:
   - {fileID: 5043954516386178425}
   - {fileID: 5039589780679017481}
   - {fileID: 8448422242747726172}
+  - {fileID: 4959381023323374512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -5182,20 +5183,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPressed: 0
-  jumpVelocity: 30
+  jumpVelocity: 27
   fallMultipler: 0.022
   lowJumpMultiplier: 0.1
   isGrounded: 1
-  maxSpeed: 17
+  maxSpeed: 20
   playerIsMoving: 0
   gravity: -9.81
   playerDead: 0
   ExtraJumpsInAir: 0
-  glideFactor: 0.73
+  glideFactor: 0.7
   m_MovementSmoothing: 0.3
-  hangTime: 0.15
+  hangTime: 0.1
   hangCounter: 0
   isOnSlantedWall: 0
+  groundCheckPoint: {fileID: 4959381023323374512}
+  groundCheckSize: {x: 5, y: 2.5}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
   isTouchingWall: 0
   wallJumping: 0
   wallCheckPoint: {fileID: 8448422242747726172}
@@ -5216,6 +5222,7 @@ MonoBehaviour:
   dashRechargeTime: 3
   maxGroundDashes: 3
   input: 0
+  isGrounded2: 0
 --- !u!114 &5039589780054138341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5532,6 +5539,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6407146076120410016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4959381023323374512}
+  m_Layer: 0
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4959381023323374512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407146076120410016}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.03, y: -0.62, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.7858855}
+  m_Children: []
+  m_Father: {fileID: 5043694211614574641}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8310711446807046098
 GameObject:
   m_ObjectHideFlags: 0

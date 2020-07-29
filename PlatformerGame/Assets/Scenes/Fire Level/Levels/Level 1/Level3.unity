@@ -980,6 +980,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FillerGround
       objectReference: {fileID: 0}
+    - target: {fileID: 1875461658307131729, guid: 44a66454aad5a465dbb8b4048b385ffb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1875461658307131728, guid: 44a66454aad5a465dbb8b4048b385ffb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44a66454aad5a465dbb8b4048b385ffb, type: 3}
@@ -1291,7 +1296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 50038083}
   - component: {fileID: 50038084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1596,7 +1601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 63458355}
   - component: {fileID: 63458356}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WalkingPlatform(1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1766,7 +1771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65512052}
   - component: {fileID: 65512053}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1864,7 +1869,7 @@ GameObject:
   - component: {fileID: 83743244}
   - component: {fileID: 83743243}
   - component: {fileID: 83743242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OscillatingPlatform (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3626,7 +3631,7 @@ GameObject:
   - component: {fileID: 186168065}
   - component: {fileID: 186168064}
   - component: {fileID: 186168063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OscillatingPlatform (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4538,7 +4543,7 @@ GameObject:
   - component: {fileID: 215173651}
   - component: {fileID: 215173650}
   - component: {fileID: 215173649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OscillatingPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5180,7 +5185,7 @@ GameObject:
   - component: {fileID: 266966068}
   - component: {fileID: 266966070}
   - component: {fileID: 266966069}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platformsprite (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -7774,7 +7779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411574056}
   - component: {fileID: 411574057}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8681,6 +8686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: jumpplatform
       objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9453,6 +9463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: jumpplatform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9701,6 +9716,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4959381023323374512, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_Enabled
@@ -9723,13 +9743,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
-      propertyPath: maxSpeed
-      value: 20
+      propertyPath: groundLayer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
-      propertyPath: glideFactor
-      value: 0.7
+      propertyPath: hangTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5040845001323594143, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
@@ -10048,7 +10068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609305920}
   - component: {fileID: 609305919}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -10493,6 +10513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: jumpplatform (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
@@ -11187,6 +11212,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 2610979021216468575, guid: 95221f77db82741a594de444f5ec558d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2610979021220302031, guid: 95221f77db82741a594de444f5ec558d,
         type: 3}
       propertyPath: m_Name
@@ -11285,6 +11315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: jumpplatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
@@ -12844,6 +12879,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: jumpplatform (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
@@ -15863,6 +15903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FillerGround
       objectReference: {fileID: 0}
+    - target: {fileID: 1875461658307131729, guid: 44a66454aad5a465dbb8b4048b385ffb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1875461658307131728, guid: 44a66454aad5a465dbb8b4048b385ffb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44a66454aad5a465dbb8b4048b385ffb, type: 3}
@@ -16376,7 +16421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 916310660}
   - component: {fileID: 916310661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -21210,6 +21255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: jumpplatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -22264,7 +22314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269439225}
   - component: {fileID: 1269439224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -24677,6 +24727,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: jumpplatform (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25968,6 +26023,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 2610979021216468575, guid: 95221f77db82741a594de444f5ec558d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2610979021220302031, guid: 95221f77db82741a594de444f5ec558d,
         type: 3}
       propertyPath: m_Name
@@ -26027,6 +26087,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610979021508562521, guid: 95221f77db82741a594de444f5ec558d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2610979021508562524, guid: 95221f77db82741a594de444f5ec558d,
         type: 3}
@@ -26729,6 +26794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: jumpplatform (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
@@ -27641,6 +27711,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 2610979021216468575, guid: 95221f77db82741a594de444f5ec558d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2610979021220302031, guid: 95221f77db82741a594de444f5ec558d,
         type: 3}
       propertyPath: m_Name
@@ -28474,7 +28549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691184647}
   - component: {fileID: 1691184648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -31742,7 +31817,7 @@ PrefabInstance:
     - target: {fileID: 3022139097877322610, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b, type: 3}
@@ -32260,6 +32335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: jumpplatform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407781727608264907, guid: 83dc969ad06954ab985d9913ca7fa75b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4407781727608264908, guid: 83dc969ad06954ab985d9913ca7fa75b,
         type: 3}
@@ -34773,6 +34853,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 2610979021216468575, guid: 95221f77db82741a594de444f5ec558d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2610979021216468577, guid: 95221f77db82741a594de444f5ec558d,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -41869,7 +41954,7 @@ GameObject:
   - component: {fileID: 4407781728534167809}
   - component: {fileID: 4407781728534167814}
   - component: {fileID: 259052451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jumpplatform (9)
   m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
@@ -42068,7 +42153,7 @@ GameObject:
   - component: {fileID: 5452726302013644946}
   - component: {fileID: 5452726302013644948}
   - component: {fileID: 5452726302013644951}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OscillatingPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -42243,7 +42328,7 @@ GameObject:
   - component: {fileID: 5452726303079679945}
   - component: {fileID: 5452726303079679951}
   - component: {fileID: 5452726303079679952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OscillatingPlatform (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -42358,7 +42443,7 @@ GameObject:
   - component: {fileID: 5452726303425993606}
   - component: {fileID: 5452726303425993600}
   - component: {fileID: 5452726303425993603}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OscillatingPlatform (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -43488,7 +43573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1319940104909347926}
   - component: {fileID: 6403090731390579301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WalkingPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
