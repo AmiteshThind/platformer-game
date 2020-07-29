@@ -15277,7 +15277,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.2924528, g: 0.16691881, b: 0.16691881, a: 1}
+  m_Color: {r: 0.24528301, g: 0.1978462, b: 0.1978462, a: 1}
   m_Intensity: 1.25
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -17926,7 +17926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1127119751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17986,7 +17986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127119750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 718, y: 183, z: 0}
+  m_LocalPosition: {x: 718, y: 176, z: 0}
   m_LocalScale: {x: 12.029249, y: 4.9198923, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18643,33 +18643,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.807
+  m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
+  m_ShadowIntensity: 0.455
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 25
+  m_PointLightOuterRadius: 50
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricSides: 40
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: -0.8196068, y: -1.6411705, z: 0}
+  - {x: -0.56127167, y: -2.1477737, z: 0}
+  - {x: -0.34688568, y: -2.2007446, z: 0}
+  - {x: 0.15316391, y: -2.1558876, z: 0}
+  - {x: 0.50201225, y: -2.1806602, z: 0}
+  - {x: 1.1500435, y: -0.63993454, z: 0}
+  - {x: 1.9499626, y: 0.14412689, z: 0}
+  - {x: 2.0636482, y: 0.8472481, z: 0}
+  - {x: 1.9530506, y: 0.9496918, z: 0}
+  - {x: 1.1336555, y: 1.211895, z: 0}
+  - {x: -0.5244274, y: 1.7549248, z: 0}
+  - {x: -1.1347046, y: 1.1151619, z: 0}
+  - {x: -1.2894955, y: 0.5599632, z: 0}
 --- !u!4 &1203453463
 Transform:
   m_ObjectHideFlags: 0

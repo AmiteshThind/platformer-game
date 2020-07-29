@@ -9505,7 +9505,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.745283, g: 0.6503649, b: 0.6503649, a: 1}
+  m_Color: {r: 0.735849, g: 0.5935386, b: 0.5935386, a: 1}
   m_Intensity: 1.75
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -38098,13 +38098,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349864044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 532.8, y: 68.2, z: 0}
-  m_LocalScale: {x: 11.351873, y: 4.404129, z: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 532.8, y: -41, z: 0}
+  m_LocalScale: {x: 11.351873, y: 4.6312504, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &1352412050
 GameObject:
   m_ObjectHideFlags: 0
