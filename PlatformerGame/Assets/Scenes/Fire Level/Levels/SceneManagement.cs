@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 
 public class SceneManagement : MonoBehaviour
 {
     PlayerMoveController playerMoveController;
+   public CinemachineVirtualCamera cinemachine;
  
     // Start is called before the first frame update
     void Start()
     {
+
+        cinemachine = FindObjectOfType<CinemachineVirtualCamera>();
         playerMoveController = GetComponent<PlayerMoveController>();
+        
     }
 
     IEnumerator MyMethod()
@@ -50,7 +55,23 @@ public class SceneManagement : MonoBehaviour
             StartCoroutine(nextLevel());
         }
 
+        
+    }
 
+ private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "DeadGround" || collision.gameObject.tag == "SlopeRock")
+        {
+            playerMoveController.playerDead = true;
+            Destroy(cinemachine);
+
+            StartCoroutine(MyMethod());
+        }
+
+        if (collision.gameObject.tag == "reachedEnd")
+        {
+            StartCoroutine(nextLevel());
+        }
     }
 
 

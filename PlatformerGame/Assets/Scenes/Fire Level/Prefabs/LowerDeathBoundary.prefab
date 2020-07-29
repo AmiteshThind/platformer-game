@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7301067884713319709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7301067884713319706}
+  - component: {fileID: 7301067884713319707}
+  m_Layer: 0
+  m_Name: LowerDeathBoundary
+  m_TagString: DeadGround
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7301067884713319706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7301067884713319709}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 440.34576, y: -38.596367, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &7301067884713319707
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7301067884713319709}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -742.2041, y: 93.279945}
+  - {x: -470.6082, y: 96.330086}
+  - {x: -465.55377, y: 53.587402}
+  - {x: -424.15735, y: 53.55262}
+  - {x: -360.9094, y: 32.328026}
+  - {x: -218.70145, y: 45.836258}
+  - {x: -191.5444, y: 46.382607}
+  - {x: -184.95227, y: 65.18004}
+  - {x: -159.28424, y: 63.78662}
+  - {x: -149.17188, y: 65.74371}
+  - {x: -143.73404, y: 76.125694}
+  - {x: -111.34772, y: 79.33657}
+  - {x: -106.116486, y: 80.44095}
+  - {x: -82.05197, y: 84.883545}
+  - {x: -73.581085, y: 84.98698}
+  - {x: -52.8183, y: 83.13566}
+  - {x: -14.909973, y: 87.922424}
+  - {x: 11.820374, y: 92.33848}
+  - {x: 70.63544, y: 99.54387}
+  - {x: 112.64032, y: 97.08535}
+  - {x: 155.30164, y: 95.40329}
+  - {x: 186.18365, y: 99.03616}
+  - {x: 225.93878, y: 109.438736}
+  - {x: 236.13397, y: 116.50779}
+  - {x: 264.1313, y: 115.9225}
+  - {x: 306.40118, y: 119.149864}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

@@ -1,13 +1,23 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Fire Level/Levels/Level 1/OpenSesamePuzzleCheck.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Fire Level/Levels/SceneManagement.cs">
     <Files>
-      <File FileName="Assets/Scenes/Fire Level/Levels/Level 1/OpenSesamePuzzleCheck.cs" Line="133" Column="1" />
-      <File FileName="Assets/PressureSwitch.cs" Line="63" Column="4" />
+      <File FileName="Assets/Scenes/RockTrigger.cs" Line="31" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="308" Column="4" />
+      <File FileName="Assets/OscillatePlatform.cs" />
+      <File FileName="Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.12/Runtime/Shaders/VectorGradient.shader" />
+      <File FileName="Assets/checkPlatformActivated.cs" />
+      <File FileName="Assets/Scenes/Fire Level/Levels/MovingDownPlatform.cs" />
+      <File FileName="Assets/PlayerCollectedCheck.cs" />
+      <File FileName="Assets/Scenes/Fire Level/Levels/Level 1/OpenSesamePuzzleCheck.cs" Line="32" Column="2" />
+      <File FileName="Assets/PressureSwitch.cs" Line="25" Column="4" />
+      <File FileName="Assets/RocksReset.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Fire Level/Levels/SceneManagement.cs" Line="56" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="21f108dd-6421-4b12-90ad-71bc0ba4c3b3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7241446b-f54b-44e5-9524-794f8ae532a6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

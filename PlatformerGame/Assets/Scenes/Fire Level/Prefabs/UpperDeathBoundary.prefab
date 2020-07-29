@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6869319217144508343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6869319217144508344}
+  - component: {fileID: 6869319217144508345}
+  m_Layer: 0
+  m_Name: UpperDeathBoundary
+  m_TagString: DeadGround
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6869319217144508344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869319217144508343}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 440.34576, y: -38.596367, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &6869319217144508345
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869319217144508343}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -466.00745, y: 148.32814}
+  - {x: -439.86792, y: 148.28746}
+  - {x: -439.0081, y: 190.4758}
+  - {x: -425.365, y: 190.37263}
+  - {x: -415.85355, y: 190.51393}
+  - {x: -408.22565, y: 190.21156}
+  - {x: -389.161, y: 189.60448}
+  - {x: -377.0673, y: 189.46506}
+  - {x: -353.49268, y: 189.95656}
+  - {x: -353.46918, y: 178.4449}
+  - {x: -337.3145, y: 181.58006}
+  - {x: -312.41776, y: 175.3415}
+  - {x: -304.5797, y: 175.54587}
+  - {x: -298.30246, y: 175.37558}
+  - {x: -282.26465, y: 173.43813}
+  - {x: -255.32828, y: 172.84077}
+  - {x: -228.90329, y: 173.11359}
+  - {x: -206.10852, y: 172.69942}
+  - {x: -167.98462, y: 172.5533}
+  - {x: -41.4227, y: 141.77402}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
