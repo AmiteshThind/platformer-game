@@ -5207,10 +5207,10 @@ MonoBehaviour:
   wallSlideSpeed: 3
   isWallSliding: 0
   xWallForce: 12
-  yWallForce: 26
+  yWallForce: 30
   walljumpDirection: -1
   isDashing: 0
-  dashSpeed: 150
+  dashSpeed: 175
   maxAirDashes: 1
   maxDashDuration: 0.1
   dashRechargeTime: 3

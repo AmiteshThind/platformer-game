@@ -10351,33 +10351,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
-      propertyPath: yWallForce
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: xWallForce
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: dashSpeed
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: glideFactor
-      value: 0.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: wallCheckSize.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: wallCheckSize.x
-      value: 0.5
+      propertyPath: maxSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5040845001323594143, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
