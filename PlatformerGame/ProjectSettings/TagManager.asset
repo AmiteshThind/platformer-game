@@ -17,6 +17,7 @@ TagManager:
   - OpenSesameCircleRock
   - OpenSesameSquareRock
   - OpenSesameTriangleRock
+  - FireElement
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: background
     uniqueID: 1733182325
+    locked: 0
+  - name: player
+    uniqueID: 1279072049
     locked: 0
