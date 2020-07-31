@@ -1,18 +1,12 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Fire Level/Levels/SceneManagement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scripts/Player/Coin.cs">
     <Files>
-      <File FileName="Assets/Scenes/RockTrigger.cs" Line="31" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="308" Column="4" />
-      <File FileName="Assets/OscillatePlatform.cs" />
-      <File FileName="Library/PackageCache/com.unity.vectorgraphics@2.0.0-preview.12/Runtime/Shaders/VectorGradient.shader" />
-      <File FileName="Assets/checkPlatformActivated.cs" />
-      <File FileName="Assets/Scenes/Fire Level/Levels/MovingDownPlatform.cs" />
-      <File FileName="Assets/PlayerCollectedCheck.cs" />
-      <File FileName="Assets/Scenes/Fire Level/Levels/Level 1/OpenSesamePuzzleCheck.cs" Line="32" Column="2" />
-      <File FileName="Assets/PressureSwitch.cs" Line="25" Column="4" />
-      <File FileName="Assets/RocksReset.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/Fire Level/Levels/SceneManagement.cs" Line="56" Column="20" />
+      <File FileName="Assets/SkyLightingChangeEffect.cs" Line="7" Column="3" />
+      <File FileName="Assets/Scenes/ActivatedMovingPlatform.cs" Line="22" Column="4" />
+      <File FileName="Assets/PlayerRadiusLightingChangeEffect.cs" Line="26" Column="2" />
+      <File FileName="Assets/PlayerCollectedCheck.cs" Line="14" Column="6" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="368" Column="1" />
+      <File FileName="Assets/Scenes/Scripts/Player/Coin.cs" Line="19" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

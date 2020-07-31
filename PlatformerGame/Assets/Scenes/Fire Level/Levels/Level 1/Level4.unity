@@ -10163,6 +10163,11 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 5039589780679017494, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5040845001323594143, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_Name
@@ -10248,6 +10253,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5116450283296060433, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1279072049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116450283296060433, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5116767356967857111, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_SortingOrder
@@ -10258,6 +10273,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5116767356967857111, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1279072049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116767356967857111, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5117092497214299683, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_SortingOrder
@@ -10268,6 +10293,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5117092497214299683, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1279072049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117092497214299683, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5117254465576079357, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_SortingOrder
@@ -10278,6 +10313,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5117254465576079357, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1279072049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117254465576079357, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5117279837006842401, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_SortingOrder
@@ -10288,6 +10333,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5117279837006842401, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1279072049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117279837006842401, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5117339018794117921, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_SortingOrder
@@ -10298,6 +10353,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5117339018794117921, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1279072049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117339018794117921, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8448422242747726172, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15255,6 +15320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899857487}
   - component: {fileID: 899857486}
+  - component: {fileID: 899857488}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -15277,8 +15343,8 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.24528301, g: 0.1978462, b: 0.1978462, a: 1}
-  m_Intensity: 1.25
+  m_Color: {r: 0.85882354, g: 0.7176471, b: 0.7176471, a: 1}
+  m_Intensity: 0.55
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -15317,6 +15383,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899857488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899857485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e6cfb44edb0482c9a532240b9141a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light2d: {fileID: 899857486}
+  counter: 0
+  duration: 100
+  InitialIntensity: 0.55
+  FinalIntensity: 0.1
 --- !u!1 &905929728
 GameObject:
   m_ObjectHideFlags: 0
@@ -17926,7 +18009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1127119751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18622,7 +18705,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1203453463}
   - component: {fileID: 1203453462}
-  m_Layer: 0
+  - component: {fileID: 1203453464}
+  m_Layer: 8
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18643,21 +18727,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 1
+  m_FalloffIntensity: 0.83
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000031173d4c75434e67
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0.455
+  m_AlphaBlendOnOverlap: 1
+  m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 50
+  m_PointLightInnerRadius: 0.5
+  m_PointLightOuterRadius: 7
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 40
@@ -18687,12 +18771,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203453461}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.010000229, y: 0.35000038, z: 0}
+  m_LocalPosition: {x: -0.02, y: 0.289, z: 0}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.7858855}
   m_Children: []
   m_Father: {fileID: 1534250482}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203453464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203453461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f51c8ad199474e0489af4e8a0d15d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light2d: {fileID: 1203453462}
+  counter: 0
+  duration: 100
+  InitialOuterRadius: 7
+  FinalOuterRadius: 50
 --- !u!1 &1215829098
 GameObject:
   m_ObjectHideFlags: 0
