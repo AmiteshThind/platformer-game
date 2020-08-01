@@ -2566,6 +2566,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: character_temp_4k
       objectReference: {fileID: 0}
+    - target: {fileID: -115743883099880440, guid: 312109a783b20d542a5d762e512ad31e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 253174945152413777, guid: 312109a783b20d542a5d762e512ad31e,
         type: 3}
       propertyPath: m_SortingOrder

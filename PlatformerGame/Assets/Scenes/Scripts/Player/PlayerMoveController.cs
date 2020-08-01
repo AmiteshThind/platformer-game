@@ -47,6 +47,7 @@ public class PlayerMoveController : MonoBehaviour
 	public float xWallForce;
 	public float yWallForce;
 	public float walljumpDirection = -1;
+	public float airSpeed = 0f; 
 	
 
 
@@ -174,7 +175,7 @@ public class PlayerMoveController : MonoBehaviour
 				Invoke("SetWallJumpingToFalse", wallJumpTime);
 			}
 
-			if(isTouchingWall && !isGrounded && input!=0)
+			if(isTouchingWall && !isGrounded)
             {
 				isWallSliding = true;
             }
@@ -221,15 +222,16 @@ public class PlayerMoveController : MonoBehaviour
 			}
 			else
 			{
-				if (!isOnSlantedWall)
-				{
-					ApplyInput();
-				}
+				
+					
+						ApplyInput();
+					
+				
 			}
 
 
 			//Replace jumpJoyButton.Pressed with Input.GetKeyDown(KeyCode.Space) for PC
-			if (jumpPressed && hangCounter>0)
+			if (jumpPressed && hangCounter>0 && !isTouchingWall)
 			{
 				jumpPressed = false;
 				//playerRigidBody.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
@@ -275,8 +277,15 @@ public class PlayerMoveController : MonoBehaviour
 
 			if (wallJumping)
 			{
+				if (isFacingRight)
+				{
 
-				playerRigidBody.velocity = new Vector2(xWallForce * -input, yWallForce);
+					playerRigidBody.velocity = new Vector2(xWallForce * -1, yWallForce);
+				}
+                else if(!isFacingRight) // for animations created two conditions if needed 
+                {
+					playerRigidBody.velocity = new Vector2(xWallForce * -1, yWallForce);
+				}
 				 
 				print("WALLJUMp");
 			}
@@ -287,13 +296,29 @@ public class PlayerMoveController : MonoBehaviour
 
 	public void ApplyInput()
 	{
+		if (!isTouchingWall)
+		{
+			 
+			float xInput = joystick.Horizontal + Input.GetAxisRaw("Horizontal");
+			Vector2 playerVelocity = playerRigidBody.velocity;
+			// Move the character by finding the target velocity
+			Vector2 targetVelocity = new Vector2(xInput * maxSpeed, playerRigidBody.velocity.y);
+			// And then smoothing it out and applying it to the character
+			playerRigidBody.velocity = Vector2.SmoothDamp(targetVelocity, targetVelocity, ref playerVelocity, m_MovementSmoothing);
 
-		float xInput = joystick.Horizontal + Input.GetAxisRaw("Horizontal");
-		Vector2 playerVelocity = playerRigidBody.velocity;
-		// Move the character by finding the target velocity
-		Vector2 targetVelocity = new Vector2(xInput * maxSpeed, playerRigidBody.velocity.y);
-		// And then smoothing it out and applying it to the character
-		playerRigidBody.velocity = Vector2.SmoothDamp(targetVelocity, targetVelocity, ref playerVelocity, m_MovementSmoothing);
+
+		}
+
+			//else if (!isGrounded && !isWallSliding && input != 0)
+			//{
+			 
+	  //          if (Mathf.Abs(playerRigidBody.velocity.x) > maxSpeed)
+	  //          {
+			//		//playerRigidBody.velocity = new Vector2(input * maxSpeed, playerRigidBody.velocity.y);
+	  //          }
+
+			//}
+
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -377,16 +402,15 @@ public class PlayerMoveController : MonoBehaviour
 
 	void FlipPlayer()
 	{
-
-        if (!isWallSliding)
-        {
+        if (!isWallSliding) { 
 			walljumpDirection *= -1;
+
+			isFacingRight = !isFacingRight;
+			Vector3 scale = transform.localScale;
+			scale.x *= -1;
+			transform.localScale = scale;
+		 }
 		}
-		isFacingRight = !isFacingRight;
-		Vector3 scale = transform.localScale;
-		scale.x *= -1;
-		transform.localScale = scale;
-	}
 
 
 
