@@ -284,7 +284,7 @@ public class PlayerMoveController : MonoBehaviour
 				}
                 else if(!isFacingRight) // for animations created two conditions if needed 
                 {
-					playerRigidBody.velocity = new Vector2(xWallForce * -1, yWallForce);
+					playerRigidBody.velocity = new Vector2(xWallForce * 1, yWallForce);
 				}
 				 
 				print("WALLJUMp");

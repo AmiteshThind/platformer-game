@@ -5198,23 +5198,24 @@ MonoBehaviour:
   hangCounter: 0
   isOnSlantedWall: 0
   groundCheckPoint: {fileID: 4959381023323374512}
-  groundCheckSize: {x: 5, y: 2.5}
+  groundCheckSize: {x: 2, y: 2.5}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 512
   isTouchingWall: 0
   wallJumping: 0
   wallCheckPoint: {fileID: 8448422242747726172}
-  wallCheckSize: {x: 0.5, y: 4}
+  wallCheckSize: {x: 1, y: 4}
   wallLayer:
     serializedVersion: 2
     m_Bits: 1024
   wallJumpTime: 0.2
-  wallSlideSpeed: 3
+  wallSlideSpeed: 5
   isWallSliding: 0
-  xWallForce: 12
-  yWallForce: 30
+  xWallForce: 18
+  yWallForce: 35
   walljumpDirection: -1
+  airSpeed: 20
   isDashing: 0
   dashSpeed: 175
   maxAirDashes: 1
