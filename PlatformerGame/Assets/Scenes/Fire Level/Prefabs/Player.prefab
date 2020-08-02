@@ -5151,13 +5151,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5040845001323594143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 73259e7bd24ad43e38d04594b8506333, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.038935155, y: 0.035395384}
+  m_Offset: {x: -0.022975415, y: 0.22680217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5168,7 +5168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9221297, y: 0.92920923}
+  m_Size: {x: 0.6733195, y: 1.3120227}
   m_EdgeRadius: 0
 --- !u!114 &5039589780054138342
 MonoBehaviour:
@@ -5219,7 +5219,7 @@ MonoBehaviour:
   isDashing: 0
   dashSpeed: 175
   maxAirDashes: 1
-  maxDashDuration: 0.1
+  maxDashDuration: 0.08
   dashRechargeTime: 3
   maxGroundDashes: 3
   input: 0
@@ -5260,8 +5260,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.038754147}
-  m_Size: {x: 0.5930176, y: 0.9224917}
+  m_Offset: {x: -0, y: 0.2428678}
+  m_Size: {x: 0.5930176, y: 1.330719}
   m_Direction: 0
 --- !u!1 &5041023674563924793
 GameObject:

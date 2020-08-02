@@ -20589,36 +20589,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
+    - target: {fileID: 4959381023323374512, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_LocalPosition.x
+      value: -0.004
       objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
+    - target: {fileID: 4959381023323374512, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
-      propertyPath: m_Offset.x
-      value: -0.022975415
+      propertyPath: m_LocalPosition.y
+      value: -0.557
       objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.6733195
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.22680217
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.3120227
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039589780054138328, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 73259e7bd24ad43e38d04594b8506333, type: 2}
     - target: {fileID: 5039589780054138341, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: DashForceValueX
@@ -20633,6 +20613,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039589780054138342, guid: 8980a07ac47194937a8cef37d84f2f52,
+        type: 3}
+      propertyPath: groundCheckSize.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5040845001323594143, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
@@ -20769,11 +20754,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 6251892158148424590, guid: 8980a07ac47194937a8cef37d84f2f52,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8448422242747726172, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_LocalPosition.x
