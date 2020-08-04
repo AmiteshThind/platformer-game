@@ -5633,7 +5633,7 @@ PrefabInstance:
     - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 125.7
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
         type: 3}
@@ -5683,7 +5683,7 @@ PrefabInstance:
     - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
         type: 3}
@@ -6358,7 +6358,7 @@ PrefabInstance:
     - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 97.56
+      value: 98.2
       objectReference: {fileID: 0}
     - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
         type: 3}
@@ -6404,6 +6404,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504946965894028067, guid: b04668ca57aa64a1db358a83e46ea3b2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b04668ca57aa64a1db358a83e46ea3b2, type: 3}
@@ -16270,7 +16280,7 @@ MonoBehaviour:
   light2d: {fileID: 899857486}
   counter: 0
   duration: 100
-  InitialIntensity: 1
+  InitialIntensity: 0.55
   FinalIntensity: 0.1
 --- !u!1 &905929728
 GameObject:
@@ -19235,7 +19245,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2c6c03090bec4479a04c209cc49dce8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22497,12 +22507,12 @@ PrefabInstance:
     - target: {fileID: 5250947234374860730, guid: 1b8ea96ad8d304959b03afad014890fc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 908.33
+      value: 914.4
       objectReference: {fileID: 0}
     - target: {fileID: 5250947234374860730, guid: 1b8ea96ad8d304959b03afad014890fc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 127.05
+      value: 128.1
       objectReference: {fileID: 0}
     - target: {fileID: 5250947234374860730, guid: 1b8ea96ad8d304959b03afad014890fc,
         type: 3}
