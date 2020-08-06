@@ -13,26 +13,29 @@ public class MovingPlatformPuzzleCheck : MonoBehaviour
     private Vector2 startPos;
     public bool MoveX;
     public bool MoveY;
-
+    public float time;
+    
 
     void Start()
     {
-        
+        startPos = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        
         if (pressureSwitch.IsActivated())
         {
+            time += Time.fixedDeltaTime;
             Vector2 v = startPos;
             if (MoveY)
             {
-                v.y += DistanceY * Mathf.Sin(Time.time * speedY);
+                v.y += DistanceY * Mathf.Sin(time * speedY);
             }
             if (MoveX)
             {
-                v.x += DistanceX * Mathf.Sin(Time.time * speedX);
+                v.x += DistanceX * Mathf.Sin(time * speedX);
             }
             transform.position = v;
         }
@@ -41,17 +44,15 @@ public class MovingPlatformPuzzleCheck : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
+        
             collision.collider.transform.SetParent(transform);
-        }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
+        
             collision.collider.transform.SetParent(null);
-        }
+      
     }
 }
