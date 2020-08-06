@@ -1,8 +1,18 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scripts/OscillatePlatform.cs">
+    <Files>
+      <File FileName="Assets/Scenes/Scripts/Player/Coin.cs" Line="9" Column="17" />
+      <File FileName="Assets/Scenes/Scripts/checkPlatformActivated.cs" Line="9" Column="11" />
+      <File FileName="Assets/Scenes/Scripts/MovingDownPlatform.cs" Line="11" Column="4" />
+      <File FileName="Assets/Scenes/Scripts/MovingPlatformPuzzleCheck.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scenes/Scripts/OpenSesamePuzzleCheck.cs" Line="10" Column="4" />
+      <File FileName="Assets/Scenes/Scripts/PressureSwitch.cs" Line="33" Column="14" />
+      <File FileName="Assets/Scenes/Scripts/OscillatePlatform.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="21f108dd-6421-4b12-90ad-71bc0ba4c3b3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7241446b-f54b-44e5-9524-794f8ae532a6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

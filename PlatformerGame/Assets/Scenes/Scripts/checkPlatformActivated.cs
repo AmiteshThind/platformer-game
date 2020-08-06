@@ -6,7 +6,7 @@ public class checkPlatformActivated : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static bool MovingPlatformDownActivated = false; 
+    public bool MovingPlatformDownActivated = false; 
     void Start()
     {
        // movingDownPlatform = GetComponent<MovingDownPlatform>();

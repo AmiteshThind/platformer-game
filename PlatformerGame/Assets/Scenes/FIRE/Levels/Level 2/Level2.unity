@@ -25021,6 +25021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActivated: 0
   rateOfDescend: 3
+  checkPlatformActivated: {fileID: 0}
 --- !u!61 &1827429521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29635,6 +29636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActivated: 0
   rateOfDescend: 3
+  checkPlatformActivated: {fileID: 6182565117020451288}
 --- !u!50 &2118234347
 Rigidbody2D:
   serializedVersion: 4
@@ -33719,6 +33721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0549d64f799409e85384aad8a9bf87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovingPlatformDownActivated: 0
 --- !u!1001 &6358894943585287452
 PrefabInstance:
   m_ObjectHideFlags: 0

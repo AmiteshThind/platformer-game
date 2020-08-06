@@ -7,6 +7,7 @@ public class MovingDownPlatform : MonoBehaviour
     // Start is called before the first frame update
     public bool isActivated;
     public float rateOfDescend = 10f;
+    public checkPlatformActivated checkPlatformActivated;
    
     Rigidbody2D rb;
     void Start()
