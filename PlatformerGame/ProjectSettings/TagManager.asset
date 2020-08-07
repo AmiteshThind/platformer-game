@@ -18,6 +18,7 @@ TagManager:
   - OpenSesameSquareRock
   - OpenSesameTriangleRock
   - FireElement
+  - Smoke
   layers:
   - Default
   - TransparentFX

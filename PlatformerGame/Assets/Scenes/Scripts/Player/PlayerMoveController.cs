@@ -389,6 +389,16 @@ public class PlayerMoveController : MonoBehaviour
 
 	}
 
+	private void OnParticleCollision(GameObject other)
+	{
+		if (other.tag == "Smoke")
+		{
+			playerDead = true;
+			glideFactor = 1;
+			playerRigidBody.gravityScale = 8f;
+		}
+	}
+
 	void shrinkPlayer()
 	{
 		if (playerIsMoving)
