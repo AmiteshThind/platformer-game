@@ -351,6 +351,7 @@ public class PlayerMoveController : MonoBehaviour
 			jumpJoyButton.Pressed = false;
 			animator.SetBool("inAir", false);
 			isOnSlantedWall = false;
+		 
 		}
 		if(other.gameObject.tag == "Wall")
         {

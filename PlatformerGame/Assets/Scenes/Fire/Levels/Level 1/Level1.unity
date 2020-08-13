@@ -28312,7 +28312,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MountainTheme
     clip: {fileID: 8300000, guid: 0c43bdc267afd4a4f940a80d71b1b7d5, type: 3}
-    volume: 0.6
+    volume: 0.388
     volumeVariance: 0
     pitch: 1.15
     pitchVariance: 0
@@ -28321,11 +28321,20 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MountainWind
     clip: {fileID: 8300000, guid: 08016c9366faa466b9ac7e336b936033, type: 3}
-    volume: 0.7
+    volume: 0.737
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: FireElementCollect
+    clip: {fileID: 8300000, guid: 5ac04272c0b914b168786552c122bf66, type: 3}
+    volume: 0.801
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
 --- !u!4 &1696099393
