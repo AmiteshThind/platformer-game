@@ -5216,6 +5216,9 @@ MonoBehaviour:
   yWallForce: 30
   walljumpDirection: -1
   airSpeed: 20
+  duration: 0.35
+  speed: 10
+  CameraForce: {x: 2, y: 1, z: 1}
   isDashing: 0
   dashSpeed: 175
   maxAirDashes: 1

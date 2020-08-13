@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DitzeGames.Effects;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,7 +48,12 @@ public class PlayerMoveController : MonoBehaviour
 	public float xWallForce;
 	public float yWallForce;
 	public float walljumpDirection = -1;
-	public float airSpeed = 0f; 
+	public float airSpeed = 0f;
+
+	[Header("Camera Shake")]
+	public float duration = 1f;
+	public float speed = 10f;
+	public Vector3 CameraForce = new Vector3(2f, 2f, 2f);
 	
 
 
@@ -102,8 +108,11 @@ public class PlayerMoveController : MonoBehaviour
 			bool isMoving = Mathf.Abs(input) > 0;
 			bool movingRight = input > 0;
 			if (jumpJoyButton.Pressed || Input.GetButtonDown("Jump"))
+			{
 				jumpPressed = true;
-		
+				
+			}
+
 
 			animator.SetBool("isMoving", isMoving);
 			if (isMoving)
@@ -142,11 +151,13 @@ public class PlayerMoveController : MonoBehaviour
 						mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 						dashDir = new Vector2(mousePosition.x - playerRigidBody.position.x, mousePosition.y - playerRigidBody.position.y);
 						dashDir.Normalize();
+						
 					}
 					if (joyDash)
 					{
 						Vector2 dir = new Vector2(joystick.Horizontal, joystick.Vertical);
 						dashDir = dir.normalized;
+						
 					}
 
 					if (!isGrounded)
@@ -173,6 +184,8 @@ public class PlayerMoveController : MonoBehaviour
 				wallJumping = true;
 				jumpJoyButton.Pressed = false;
 				Invoke("SetWallJumpingToFalse", wallJumpTime);
+				AudioManager.instance.Play("PlayerJump");
+
 			}
 
 			if(isTouchingWall && !isGrounded)
@@ -209,9 +222,12 @@ public class PlayerMoveController : MonoBehaviour
 				{
 					dashDuration -= Time.deltaTime;
 					bool airDash = !isGrounded;
+					AudioManager.instance.Play("PlayerDash");
+					CameraEffects.ShakeOnce(duration,speed,CameraForce);
 					if (airDash)
 					{
 						playerRigidBody.velocity = dashDir * dashSpeed;
+
 					}
 					else
 					{
@@ -239,6 +255,10 @@ public class PlayerMoveController : MonoBehaviour
 				isGrounded = false;
 				ExtraJumpCount--;
 				animator.SetBool("inAir", true);
+				if (hangCounter == hangTime)
+				{
+					AudioManager.instance.Play("PlayerJump");
+				}
 			}
 
 			if (isGrounded)
