@@ -55,6 +55,13 @@ public class SceneManagement : MonoBehaviour
 
     }
 
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        sceneTimer = 0f;
+        Coin.coinCount = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -116,7 +123,7 @@ public class SceneManagement : MonoBehaviour
                 objectivesNotMetIcons[1].SetActive(true);
             }
 
-            if (Coin.coinCount == fireElementsToCollect || sceneTimer<timeToCompleteLevelSeconds)
+            if (Coin.coinCount >= fireElementsToCollect || sceneTimer<timeToCompleteLevelSeconds)
             {
                 //StartCoroutine(nextLevel());
                 LevelTitle.text = levelName + " Passed";
