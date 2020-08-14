@@ -41,10 +41,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 73259e7bd24ad43e38d04594b8506333, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.499084, y: 10.71254}
+  m_Offset: {x: 15.643219, y: 10.71254}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,5 +55,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.333008, y: 34.212234}
+  m_Size: {x: 22.044739, y: 34.212234}
   m_EdgeRadius: 0
