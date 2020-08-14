@@ -28311,17 +28311,17 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: MountainTheme
-    clip: {fileID: 8300000, guid: 0c43bdc267afd4a4f940a80d71b1b7d5, type: 3}
-    volume: 0.388
+    clip: {fileID: 8300000, guid: 5d4b33464106b4abaafe51c3af9cc67c, type: 3}
+    volume: 0.155
     volumeVariance: 0
-    pitch: 1.15
+    pitch: 0.8
     pitchVariance: 0
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: MountainWind
     clip: {fileID: 8300000, guid: 08016c9366faa466b9ac7e336b936033, type: 3}
-    volume: 0.737
+    volume: 0.764
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
