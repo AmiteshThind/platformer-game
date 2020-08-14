@@ -14909,12 +14909,12 @@ PrefabInstance:
     - target: {fileID: 5043694211614574641, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 552.7
+      value: -16.28
       objectReference: {fileID: 0}
     - target: {fileID: 5043694211614574641, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 96.2
+      value: 67.03
       objectReference: {fileID: 0}
     - target: {fileID: 5043694211614574641, guid: 8980a07ac47194937a8cef37d84f2f52,
         type: 3}
@@ -42203,7 +42203,7 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 720.0111
+      value: 720.3222
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -50878,6 +50878,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b, type: 3}
+--- !u!1 &1958886292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7484412902284759, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1958886293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 757852525166678232, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1958886294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 626879662014961673, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1958886295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4102925830796892692, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1958886296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 600709702384373684, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1958886297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5197035679723926899, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1958886298 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7093054697560932932, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1958886299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2380823159257926208, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958886291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1959651373
 GameObject:
   m_ObjectHideFlags: 0
@@ -52872,6 +52938,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachine: {fileID: 0}
+  fireElementsToCollect: 25
+  timeToCompleteLevelSeconds: 300
+  levelName: Level 6
+  objectivesMetIcons:
+  - {fileID: 1958886295}
+  - {fileID: 1958886294}
+  objectivesNotMetIcons:
+  - {fileID: 1958886293}
+  - {fileID: 1958886292}
+  Panel: {fileID: 1958886299}
+  LevelTitle: {fileID: 1958886298}
+  CollectibleObjective: {fileID: 1958886297}
+  TimeObjective: {fileID: 1958886296}
 --- !u!1 &2007279262
 GameObject:
   m_ObjectHideFlags: 0

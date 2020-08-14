@@ -5075,9 +5075,7 @@ GameObject:
   - component: {fileID: 5039589780054138329}
   - component: {fileID: 5039589780054138328}
   - component: {fileID: 5039589780054138342}
-  - component: {fileID: 5039589780054138341}
   - component: {fileID: 6251892158148424590}
-  - component: {fileID: 7237873223492496662}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -5228,29 +5226,6 @@ MonoBehaviour:
   maxGroundDashes: 3
   input: 0
   isGrounded2: 0
---- !u!114 &5039589780054138341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5040845001323594143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553b5d96d35444af08def887892968fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DashCharged: 1
-  DashForceValueX: 30
-  DashForceValueY: 15
-  GroundDashDuration: 0.33
-  AirDashDuration: 0.33
-  DashEffect: {fileID: 5039589780679017495}
-  AirDashUsed: 0
-  isDashing: 0
-  isDashingInAir: 0
-  DashRechargeTimeCounter: 0
-  DashRechargeTime: 0
 --- !u!70 &6251892158148424590
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5267,32 +5242,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0, y: 0.2428678}
   m_Size: {x: 0.5930176, y: 1.330719}
   m_Direction: 0
---- !u!114 &7237873223492496662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5040845001323594143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a199f922e04c543f08bb5891c0f68f2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cinemachine: {fileID: 0}
-  fireElementsToCollect: 10
-  timeToCompleteLevelSeconds: 50
-  levelName: Level 1
-  objectivesMetIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  objectivesNotMetIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  Panel: {fileID: 0}
-  LevelTitle: {fileID: 0}
-  CollectibleObjective: {fileID: 0}
-  TimeObjective: {fileID: 0}
 --- !u!1 &5041023674563924793
 GameObject:
   m_ObjectHideFlags: 0

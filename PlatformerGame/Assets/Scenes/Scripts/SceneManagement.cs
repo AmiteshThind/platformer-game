@@ -15,8 +15,8 @@ public class SceneManagement : MonoBehaviour
     public float timeToCompleteLevelSeconds;
     public string levelName;
     public GameObject [] objectivesMetIcons;
-    public GameObject[] objectivesNotMetIcons; 
-
+    public GameObject[] objectivesNotMetIcons;
+    private bool ObjectivesMet; 
     public GameObject Panel;
     public Text LevelTitle,CollectibleObjective, TimeObjective;
     
@@ -39,13 +39,19 @@ public class SceneManagement : MonoBehaviour
         Coin.coinCount = 0;
     }
 
-    IEnumerator nextLevel()
+    public void nextLevel()
     {
         Debug.Log("Before Waiting 1 seconds");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        sceneTimer = 0f;
-        Coin.coinCount = 0;
+        if (ObjectivesMet)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            sceneTimer = 0f;
+            Coin.coinCount = 0;
+        }
+        else
+        {
+            print("Objectives Not Met");
+        }
 
     }
 
@@ -114,11 +120,13 @@ public class SceneManagement : MonoBehaviour
             {
                 //StartCoroutine(nextLevel());
                 LevelTitle.text = levelName + " Passed";
+                ObjectivesMet = true; 
             }
             else
             {
                 // StartCoroutine(MyMethod());
                 LevelTitle.text = levelName + " Failed";
+                ObjectivesMet = false; 
 
             }
         }
