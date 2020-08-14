@@ -7,7 +7,8 @@ public class ScoreScript : MonoBehaviour
 {
    
     // Start is called before the first frame update
-    Text score; 
+    Text score;
+   
     void Start()
     {
         score = GetComponent<Text>();
@@ -16,6 +17,7 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = ""+Coin.coinCount; 
+        score.text = ""+Coin.coinCount;
+       
     }
 }

@@ -9,6 +9,7 @@ public class SceneManagement : MonoBehaviour
 {
     PlayerMoveController playerMoveController;
    public CinemachineVirtualCamera cinemachine;
+    public static float sceneTimer = 0f; 
  
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class SceneManagement : MonoBehaviour
         {
             StartCoroutine(MyMethod());
         }
+        sceneTimer +=Time.deltaTime; 
     }
 
 
