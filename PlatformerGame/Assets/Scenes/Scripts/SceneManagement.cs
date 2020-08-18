@@ -75,7 +75,7 @@ public class SceneManagement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "SlopeRock")
+        if(collision.gameObject.tag == "deadlyObstacle")
         {
             playerMoveController.playerDead = true; 
 
