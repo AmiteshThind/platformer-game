@@ -8072,6 +8072,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &337568594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337568596}
+  - component: {fileID: 337568595}
+  m_Layer: 0
+  m_Name: Flaming Rocks System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &337568595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337568594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1c03718fbbda54eaeb39b501f1151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 2007058735}
+  flamingRockPrefab: {fileID: 2938140078858437399, guid: 9a33e130b1532c14397a2d25c3291a34,
+    type: 3}
+  spawnInterval: 1
+--- !u!4 &337568596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337568594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.1421514, y: 82.4077, z: -3.9843156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &340082643
 GameObject:
   m_ObjectHideFlags: 0
@@ -39383,7 +39430,7 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 132.82224
+      value: 130.95557
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -49918,6 +49965,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 586293445}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &2007058735 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5039589780054138329, guid: 8980a07ac47194937a8cef37d84f2f52,
+    type: 3}
+  m_PrefabInstance: {fileID: 586293445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2007058737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54193,6 +54246,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0741f6e2cf2ef4a94b5ff8b7c74e8d75, type: 3}
+--- !u!1001 &2938140078169755478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 105.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437396, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437396, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437397, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938140078858437399, guid: 9a33e130b1532c14397a2d25c3291a34,
+        type: 3}
+      propertyPath: m_Name
+      value: Flaming Rock
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a33e130b1532c14397a2d25c3291a34, type: 3}
 --- !u!114 &2947013617540940296
 MonoBehaviour:
   m_ObjectHideFlags: 0

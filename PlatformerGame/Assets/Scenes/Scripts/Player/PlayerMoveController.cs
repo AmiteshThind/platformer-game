@@ -467,4 +467,9 @@ public class PlayerMoveController : MonoBehaviour
 		jumpPressed = false; 
     }
 
+	public void KillPlayer()
+	{
+		playerDead = true;
+	}
+
 }
