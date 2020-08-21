@@ -8104,7 +8104,7 @@ MonoBehaviour:
   playerRb: {fileID: 2007058735}
   flamingRockPrefab: {fileID: 2938140078858437399, guid: 9a33e130b1532c14397a2d25c3291a34,
     type: 3}
-  spawnInterval: 1
+  spawnInterval: 10
 --- !u!4 &337568596
 Transform:
   m_ObjectHideFlags: 0
@@ -8113,7 +8113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337568594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1421514, y: 82.4077, z: -3.9843156}
+  m_LocalPosition: {x: 5.1421514, y: 146.5, z: -3.9843156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39430,7 +39430,7 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 130.95557
+      value: 132.82224
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -54308,15 +54308,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2938140078858437396, guid: 9a33e130b1532c14397a2d25c3291a34,
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
         type: 3}
-      propertyPath: m_Mass
-      value: 1
+      propertyPath: m_LocalScale.x
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2938140078858437396, guid: 9a33e130b1532c14397a2d25c3291a34,
+    - target: {fileID: 2938140078858437395, guid: 9a33e130b1532c14397a2d25c3291a34,
         type: 3}
-      propertyPath: m_GravityScale
-      value: 3
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2938140078858437397, guid: 9a33e130b1532c14397a2d25c3291a34,
         type: 3}

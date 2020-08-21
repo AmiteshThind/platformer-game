@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/nextLevelBtnScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FlamingRocksSpawner.cs">
     <Files>
       <File FileName="Assets/Scenes/Scripts/PressureSwitch.cs" Line="76" Column="17" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="344" Column="27" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="235" Column="60" />
       <File FileName="Assets/Scenes/Scripts/Sound/AudioManager.cs" Line="39" Column="6" />
       <File FileName="Assets/ScoreScript.cs" Line="23" Column="6" />
       <File FileName="Assets/Scenes/Scripts/Player/Coin.cs" Line="14" Column="39" />
-      <File FileName="Assets/Scenes/Scripts/SceneManagement.cs" Line="60" Column="68" />
+      <File FileName="Assets/Scenes/Scripts/SceneManagement.cs" Line="84" Column="1" />
       <File FileName="Assets/TimerScript.cs" Line="28" Column="6" />
-      <File FileName="Assets/btnPressed.cs" Line="13" Column="1" />
+      <File FileName="Assets/btnPressed.cs" Line="1" Column="1" />
       <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" Line="4" Column="84" />
       <File FileName="Assets/Scenes/Scripts/MovingDownPlatform.cs" Line="32" Column="10" />
-      <File FileName="Assets/restarttLevelBtnPressed.cs" Line="29" Column="29" />
-      <File FileName="Assets/nextLevelBtnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/restarttLevelBtnPressed.cs" Line="29" Column="37" />
+      <File FileName="Assets/nextLevelBtnScript.cs" Line="27" Column="25" />
+      <File FileName="Assets/FlamingRocksSpawner.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

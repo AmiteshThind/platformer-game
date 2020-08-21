@@ -30,10 +30,8 @@ public class FlamingRocksSpawner : MonoBehaviour
 
 	void spawnRocks()
 	{
-		Instantiate(flamingRockPrefab, new Vector3(playerRb.position.x - Random.Range(20, 15), playerRb.position.y + Random.Range(30, 40), 0), Quaternion.identity);
-		Instantiate(flamingRockPrefab, new Vector3(playerRb.position.x - Random.Range(10, 5), playerRb.position.y + Random.Range(40, 45), 0), Quaternion.identity);
-		Instantiate(flamingRockPrefab, new Vector3(playerRb.position.x + Random.Range(0, 5), playerRb.position.y + Random.Range(45, 50), 0), Quaternion.identity);
-		Instantiate(flamingRockPrefab, new Vector3(playerRb.position.x + Random.Range(10, 15), playerRb.position.y + Random.Range(30, 40), 0), Quaternion.identity);
-		Instantiate(flamingRockPrefab, new Vector3(playerRb.position.x + Random.Range(20, 25), playerRb.position.y + Random.Range(40, 45), 0), Quaternion.identity);
+		Instantiate(flamingRockPrefab, new Vector3(playerRb.position.x - Random.Range(30, -30), playerRb.position.y + Random.Range(150, 175), 0), Quaternion.identity);
+		Instantiate(flamingRockPrefab, new Vector3(playerRb.position.x - Random.Range(-30, 30), playerRb.position.y + Random.Range(150, 175), 0), Quaternion.identity);
+	 
 	}
 }
