@@ -19,7 +19,7 @@ public class SceneManagement : MonoBehaviour
     private bool ObjectivesMet; 
     public GameObject Panel;
     public Text LevelTitle,CollectibleObjective, TimeObjective;
-    
+    public dissolvePlayer dissolvePlayer;
  
     // Start is called before the first frame update
     void Start()
@@ -77,14 +77,22 @@ public class SceneManagement : MonoBehaviour
     {
         if(collision.gameObject.tag == "deadlyObstacle")
         {
-            playerMoveController.playerDead = true; 
-
+            playerMoveController.playerDead = true;
+            
             StartCoroutine(MyMethod());
         }
 
-        
+        if (collision.gameObject.tag == "DeadGround")
+        {
+            playerMoveController.playerDead = true;
+            Destroy(cinemachine);
+            dissolvePlayer.dissolvingPlayer = true;
+            StartCoroutine(MyMethod());
+        }
 
-        
+
+
+
     }
 
  private void OnTriggerEnter2D(Collider2D collision)
@@ -93,7 +101,7 @@ public class SceneManagement : MonoBehaviour
         {
             playerMoveController.playerDead = true;
             Destroy(cinemachine);
-            
+            dissolvePlayer.dissolvingPlayer = true;
             StartCoroutine(MyMethod());
         }
 

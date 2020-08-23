@@ -1,24 +1,25 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scripts/OpenSesamePuzzleCheck.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/dissolvePlayer.cs">
     <Files>
       <File FileName="Assets/Scenes/Scripts/PressureSwitch.cs" Line="76" Column="17" />
       <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" />
       <File FileName="Assets/Scenes/Scripts/Sound/AudioManager.cs" />
       <File FileName="Assets/ScoreScript.cs" />
       <File FileName="Assets/Scenes/Scripts/Player/Coin.cs" />
-      <File FileName="Assets/Scenes/Scripts/SceneManagement.cs" />
+      <File FileName="Assets/Scenes/Scripts/SceneManagement.cs" Line="96" Column="13" />
       <File FileName="Assets/TimerScript.cs" />
       <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" />
       <File FileName="Assets/Scenes/Scripts/MovingDownPlatform.cs" />
       <File FileName="Assets/restarttLevelBtnPressed.cs" />
       <File FileName="Assets/nextLevelBtnScript.cs" />
       <File FileName="Assets/FlamingRocksSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/Scripts/OpenSesamePuzzleCheck.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scripts/OpenSesamePuzzleCheck.cs" Line="11" Column="30" />
+      <File FileName="Assets/dissolvePlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="364e0dcc-35f5-46f7-b9f2-e8f3911115f3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ba0ef288-98df-4951-a7a3-fc80b787345f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
