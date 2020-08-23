@@ -93,7 +93,7 @@ public class SceneManagement : MonoBehaviour
         {
             playerMoveController.playerDead = true;
             Destroy(cinemachine);
-
+            
             StartCoroutine(MyMethod());
         }
 

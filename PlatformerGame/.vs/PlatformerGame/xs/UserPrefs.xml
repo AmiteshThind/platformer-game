@@ -1,24 +1,24 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FlamingRocksSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scripts/OpenSesamePuzzleCheck.cs">
     <Files>
       <File FileName="Assets/Scenes/Scripts/PressureSwitch.cs" Line="76" Column="17" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="235" Column="60" />
-      <File FileName="Assets/Scenes/Scripts/Sound/AudioManager.cs" Line="39" Column="6" />
-      <File FileName="Assets/ScoreScript.cs" Line="23" Column="6" />
-      <File FileName="Assets/Scenes/Scripts/Player/Coin.cs" Line="14" Column="39" />
-      <File FileName="Assets/Scenes/Scripts/SceneManagement.cs" Line="84" Column="1" />
-      <File FileName="Assets/TimerScript.cs" Line="28" Column="6" />
-      <File FileName="Assets/btnPressed.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" Line="4" Column="84" />
-      <File FileName="Assets/Scenes/Scripts/MovingDownPlatform.cs" Line="32" Column="10" />
-      <File FileName="Assets/restarttLevelBtnPressed.cs" Line="29" Column="37" />
-      <File FileName="Assets/nextLevelBtnScript.cs" Line="27" Column="25" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" />
+      <File FileName="Assets/Scenes/Scripts/Sound/AudioManager.cs" />
+      <File FileName="Assets/ScoreScript.cs" />
+      <File FileName="Assets/Scenes/Scripts/Player/Coin.cs" />
+      <File FileName="Assets/Scenes/Scripts/SceneManagement.cs" />
+      <File FileName="Assets/TimerScript.cs" />
+      <File FileName="Assets/Scenes/Scripts/UI/JumpJoyButton.cs" />
+      <File FileName="Assets/Scenes/Scripts/MovingDownPlatform.cs" />
+      <File FileName="Assets/restarttLevelBtnPressed.cs" />
+      <File FileName="Assets/nextLevelBtnScript.cs" />
       <File FileName="Assets/FlamingRocksSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scripts/OpenSesamePuzzleCheck.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="21f108dd-6421-4b12-90ad-71bc0ba4c3b3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="364e0dcc-35f5-46f7-b9f2-e8f3911115f3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
