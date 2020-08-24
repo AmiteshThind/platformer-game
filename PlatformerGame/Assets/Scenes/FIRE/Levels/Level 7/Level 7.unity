@@ -39197,7 +39197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1593314577
 Transform:
   m_ObjectHideFlags: 0
@@ -39387,12 +39387,12 @@ PrefabInstance:
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 92.99999
+      value: 67.6
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 813.6222
+      value: 39.72222
       objectReference: {fileID: 0}
     - target: {fileID: 5708351173363931979, guid: ee7107a65be2446df84b8fa1ef2ebfa7,
         type: 3}
@@ -49959,6 +49959,7 @@ MonoBehaviour:
   LevelTitle: {fileID: 1958886298}
   CollectibleObjective: {fileID: 1958886297}
   TimeObjective: {fileID: 1958886296}
+  dissolvePlayer: {fileID: 0}
 --- !u!1 &2007279262
 GameObject:
   m_ObjectHideFlags: 0
