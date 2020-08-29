@@ -28,6 +28,9 @@ public class FlamingRock : MonoBehaviour
 				playerObj.KillPlayer();
 			}
 		}
-		Destroy(this.gameObject);
+		if (collision.gameObject.tag != "Fireball")
+		{
+			Destroy(this.gameObject);
+		}
 	}
 }
