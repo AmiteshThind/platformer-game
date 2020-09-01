@@ -343,7 +343,7 @@ public class PlayerMoveController : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "Ground" && isGrounded == false)
+		if ((other.gameObject.tag == "Ground" || other.gameObject.tag=="OpenSesameCircleRock" || other.gameObject.tag == "OpenSesameSquareRock" ||other.gameObject.tag == "OpenSesameTriangleRock" || other.gameObject.tag == "BlankRock" ) && isGrounded == false)
 		{
 			airDashCount = 0;
 			isGrounded = true;
@@ -375,7 +375,7 @@ public class PlayerMoveController : MonoBehaviour
 
 	void OnCollisionStay2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "Ground" && isGrounded == true)
+		if ((other.gameObject.tag == "Ground" || other.gameObject.tag == "OpenSesameCircleRock" || other.gameObject.tag == "OpenSesameSquareRock" || other.gameObject.tag == "OpenSesameTriangleRock" || other.gameObject.tag == "BlankRock") && isGrounded == true)
 		{ 
 			airDashCount = 0;
 			jumpPressed = false;

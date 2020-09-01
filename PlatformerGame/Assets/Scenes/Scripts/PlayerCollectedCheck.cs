@@ -22,8 +22,10 @@ public class PlayerCollectedCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("yep");
         if(collision.gameObject.tag == "Player")
         {
+            print("plauer");
             playerCollectedActivationKey = true;
             Destroy(GetComponent<SpriteRenderer>());
             Destroy(GetComponent<BoxCollider2D>());
@@ -34,6 +36,6 @@ public class PlayerCollectedCheck : MonoBehaviour
 
         }
     }
-
+   
 
 }

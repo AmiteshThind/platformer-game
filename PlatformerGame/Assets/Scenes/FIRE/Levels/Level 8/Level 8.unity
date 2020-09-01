@@ -498,7 +498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439375092}
   m_LocalRotation: {x: -0, y: 0.48374143, z: -0, w: 0.875211}
-  m_LocalPosition: {x: 28.6, y: 24.7, z: 0}
+  m_LocalPosition: {x: 28, y: 23.3, z: 0}
   m_LocalScale: {x: -2.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779926408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.55, y: 25.51, z: 1}
+  m_LocalPosition: {x: 20.4, y: 29.7, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1074,7 +1074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860210470}
   m_LocalRotation: {x: -0, y: -0, z: -0.008788912, w: 0.9999614}
-  m_LocalPosition: {x: 27.6, y: 38.4, z: 0}
+  m_LocalPosition: {x: 27, y: 37.1, z: 0}
   m_LocalScale: {x: 0.5, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2827,12 +2827,12 @@ MonoBehaviour:
   fireballPrefab: {fileID: 2938140078858437396, guid: 9a33e130b1532c14397a2d25c3291a34,
     type: 3}
   spawnLocation: {fileID: 779926408}
-  spawnInterval: 1
+  spawnInterval: 1.25
   spawnAmount: 4
   gravityScale: 0
   force: 1000
-  maxAngle: 230
   minAngle: 140
+  maxAngle: 230
 --- !u!1 &1682915497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979176987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1, y: 29.2, z: 0}
+  m_LocalPosition: {x: 5.46, y: 27.5, z: 0}
   m_LocalScale: {x: 0.15, y: 0.12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
