@@ -8,6 +8,7 @@ public class Pendulum : MonoBehaviour
     public float leftPushRange;
     public float rightPushRange;
     public float velocityThreshold;
+    PlayerMoveController playerMoveController;
     #endregion //Public Variables
 
     #region Private Variables
@@ -20,6 +21,7 @@ public class Pendulum : MonoBehaviour
     {
         body2d = GetComponent<Rigidbody2D>();
         body2d.angularVelocity = velocityThreshold;
+        playerMoveController = FindObjectOfType<PlayerMoveController>();
     }
     //Update is called by Unity every frame
     void Update()
@@ -32,19 +34,26 @@ public class Pendulum : MonoBehaviour
     #region Utility Methods 
     public void Push()
     {
-        if (transform.rotation.z > 0
-            && transform.rotation.z < rightPushRange
-            && (body2d.angularVelocity > 0)
-            && body2d.angularVelocity < velocityThreshold)
+        if (!playerMoveController.playerDead)
         {
-            body2d.angularVelocity = velocityThreshold;
+            if (transform.rotation.z > 0
+                && transform.rotation.z < rightPushRange
+                && (body2d.angularVelocity > 0)
+                && body2d.angularVelocity < velocityThreshold)
+            {
+                body2d.angularVelocity = velocityThreshold;
+            }
+            else if (transform.rotation.z < 0
+                && transform.rotation.z > leftPushRange
+                && (body2d.angularVelocity < 0)
+                && body2d.angularVelocity > velocityThreshold * -1)
+            {
+                body2d.angularVelocity = velocityThreshold * -1;
+            }
         }
-        else if (transform.rotation.z < 0
-            && transform.rotation.z > leftPushRange
-            && (body2d.angularVelocity < 0)
-            && body2d.angularVelocity > velocityThreshold * -1)
+        else if (playerMoveController.playerDead)
         {
-            body2d.angularVelocity = velocityThreshold * -1;
+            body2d.isKinematic = true; 
         }
 
     }
