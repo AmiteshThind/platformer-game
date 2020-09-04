@@ -16,7 +16,7 @@
       <File FileName="Assets/Scenes/Scripts/OpenSesamePuzzleCheck.cs" />
       <File FileName="Assets/dissolvePlayer.cs" />
       <File FileName="Assets/Scenes/Scripts/PlayerCollectedCheck.cs" />
-      <File FileName="Assets/YCG_PendulumKit/Pendulum.cs" Line="1" Column="1" />
+      <File FileName="Assets/YCG_PendulumKit/Pendulum.cs" Line="56" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
