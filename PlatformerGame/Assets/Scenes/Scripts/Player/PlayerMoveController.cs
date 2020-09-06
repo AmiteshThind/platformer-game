@@ -184,7 +184,7 @@ public class PlayerMoveController : MonoBehaviour
 				wallJumping = true;
 				jumpJoyButton.Pressed = false;
 				Invoke("SetWallJumpingToFalse", wallJumpTime);
-				AudioManager.instance.Play("PlayerJump");
+				//AudioManager.instance.Play("PlayerJump");
 
 			}
 
@@ -222,7 +222,7 @@ public class PlayerMoveController : MonoBehaviour
 				{
 					dashDuration -= Time.deltaTime;
 					bool airDash = !isGrounded;
-					AudioManager.instance.Play("PlayerDash");
+					//AudioManager.instance.Play("PlayerDash");
 					CameraEffects.ShakeOnce(duration,speed,CameraForce);
 					if (airDash)
 					{
@@ -257,7 +257,7 @@ public class PlayerMoveController : MonoBehaviour
 				animator.SetBool("inAir", true);
 				if (hangCounter == hangTime)
 				{
-					AudioManager.instance.Play("PlayerJump");
+				//	AudioManager.instance.Play("PlayerJump");
 				}
 			}
 

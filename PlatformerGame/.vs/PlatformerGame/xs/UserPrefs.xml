@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{0115E60E-F0CD-BE1B-22BF-B53E041EF85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/YCG_PendulumKit/Pendulum.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scripts/Player/PlayerMoveController.cs">
     <Files>
       <File FileName="Assets/Scenes/Scripts/PressureSwitch.cs" Line="76" Column="17" />
-      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" />
+      <File FileName="Assets/Scenes/Scripts/Player/PlayerMoveController.cs" Line="225" Column="1" />
       <File FileName="Assets/Scenes/Scripts/Sound/AudioManager.cs" />
       <File FileName="Assets/ScoreScript.cs" />
       <File FileName="Assets/Scenes/Scripts/Player/Coin.cs" />
@@ -21,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8d7e987e-406b-4d02-98af-79993ad8c527" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e13b0358-ecbc-40b4-a115-3f37c9f7e029" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

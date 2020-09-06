@@ -22,7 +22,7 @@ public class Coin : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             coinCount++;
-            AudioManager.instance.Play("FireElementCollect");
+           // AudioManager.instance.Play("FireElementCollect");
             Destroy(gameObject);
         }
     }
