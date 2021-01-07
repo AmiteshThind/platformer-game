@@ -28271,6 +28271,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3721729226206844358, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -950.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721729226206844358, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 76.03763
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721729226206844358, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 92.41828
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721729226206844358, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 435.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4102925830796892692, guid: 09d6f5c7b44f54c2fa42b5c508a58b1b,
         type: 3}
       propertyPath: m_IsActive
@@ -29267,7 +29287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachine: {fileID: 0}
-  fireElementsToCollect: 20
+  fireElementsToCollect: 27
   timeToCompleteLevelSeconds: 120
   levelName: Level 2
   objectivesMetIcons:
